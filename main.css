@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container {
+    @apply w-full;
+  }
+  .welcomeSpan {
+    @apply text-white  absolute left-[32px];
+  }
+  .progressBar {
+    @apply w-[30px] h-[3px] bg-gray-400;
+  }
+  .nextBtn {
+    @apply bg-black rounded-3xl text-white py-3 px-[173px] absolute left-[24px] bottom-[32px];
+  }
+}
