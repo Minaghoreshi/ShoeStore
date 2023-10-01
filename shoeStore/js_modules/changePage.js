@@ -10,10 +10,10 @@ export function nextPage() {
   secondPage.style.display = "none";
   updateScreen(currentIndex);
 }
-export function updateScreen(index) {
+export function updateScreen(value) {
   document.body.innerHTML = "";
-  if (currentIndex < screenData.length) {
-    let currentScreen = screenData[index];
+  if (value < screenData.length) {
+    let currentScreen = screenData[value];
     const progressContainer = document.createElement("div");
     const container = document.createElement("div");
     container.classList.add("container", "flex", "flex-col");
@@ -28,7 +28,7 @@ export function updateScreen(index) {
     screenData.forEach((screen, index) => {
       const progressBar = document.createElement("div");
       progressBar.classList.add("progressBar");
-      if (index == currentIndex) {
+      if (index == value) {
         progressBar.style.backgroundColor = "#000";
       }
       progressContainer.insertAdjacentElement("beforeend", progressBar);
@@ -36,7 +36,7 @@ export function updateScreen(index) {
     const html = `<div>
         <img
           src="${currentScreen.img}"
-          alt="screen${index}-image"
+          alt="screen${value}-image"
         />
       </div>
       <div class="px-6 pt-8 text-center justify-center">
@@ -57,7 +57,7 @@ export function updateScreen(index) {
     container.append(progressContainer);
     document.body.append(container);
     currentIndex++;
-  } else if (currentIndex >= screenData.length) {
+  } else if (value >= screenData.length) {
     createLoginPage();
   }
 }

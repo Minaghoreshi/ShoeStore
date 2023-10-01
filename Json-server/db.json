@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "ghoreishi45@gmail.com",
+      "password": "12345abcd"
+    },
+    {
+      "id": 2,
+      "email": "testtest@gmail.com",
+      "password": "abcd12345"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Running Shoes",
+      "price": 79.99,
+      "description": "Comfortable running shoes for athletes.",
+      "image": "running_shoes.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Casual Sneakers",
+      "price": 49.99,
+      "description": "Stylish sneakers for everyday wear.",
+      "image": "casual_sneakers.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Hiking Boots",
+      "price": 99.99,
+      "description": "Durable hiking boots for outdoor adventures.",
+      "image": "hiking_boots.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Flip Flops",
+      "price": 19.99,
+      "description": "Comfortable flip flops for the beach.",
+      "image": "flip_flops.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Formal Shoes",
+      "price": 129.99,
+      "description": "Elegant formal shoes for special occasions.",
+      "image": "formal_shoes.jpg"
+    }
+  ]
+}
