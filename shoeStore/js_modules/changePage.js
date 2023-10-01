@@ -1,16 +1,13 @@
 import { secondPage } from "./dom.js";
 import { screenData } from "./util.js";
-import { loginHtmlPage } from "./innerHtml.js";
 export let currentIndex = 0;
-function createLoginPage() {
-  document.body.innerHTML = "";
-  document.body.insertAdjacentHTML("beforeend", loginHtmlPage);
-}
+
 export function nextPage() {
   secondPage.style.display = "none";
   updateScreen(currentIndex);
 }
 export function updateScreen(value) {
+  currentIndex = value;
   document.body.innerHTML = "";
   if (value < screenData.length) {
     let currentScreen = screenData[value];
@@ -56,9 +53,10 @@ export function updateScreen(value) {
     container.insertAdjacentHTML("beforeend", html);
     container.append(progressContainer);
     document.body.append(container);
+
     currentIndex++;
   } else if (value >= screenData.length) {
-    createLoginPage();
+    window.location.href = "http://127.0.0.1:5500/shoeStore/html/login.html";
   }
 }
 export function NextBotton(e) {

@@ -3,12 +3,14 @@
     {
       "id": 1,
       "email": "ghoreishi45@gmail.com",
-      "password": "12345abcd"
+      "password": "12345abcd",
+      "remember": "on"
     },
     {
       "id": 2,
       "email": "testtest@gmail.com",
-      "password": "abcd12345"
+      "password": "abcd12345",
+      "remember": "off"
     }
   ],
   "products": [
