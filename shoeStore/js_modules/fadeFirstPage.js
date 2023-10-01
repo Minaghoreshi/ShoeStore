@@ -5,5 +5,4 @@ export function fadeFirstPage() {
   firstPage.style.display = "none";
   // secondPage.classList.add("slideRight");
   secondPage.classList.remove("hidden");
-  console.log("done");
 }
