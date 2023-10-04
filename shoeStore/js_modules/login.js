@@ -1,6 +1,6 @@
 import { updateScreen } from "./changePage.js";
 import { screenData } from "./util.js";
-import { getDatabyEmail } from "./loginGetData.js";
+import { getDatabyEmail } from "./get-user.js";
 import {
   backBtn,
   password,

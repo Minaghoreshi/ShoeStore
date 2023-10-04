@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer src="../js_modules/home.js" type="module"></script>
   </head>
   <body>
     <div class="container px-6 flex flex-col gap-2 relative">
@@ -38,35 +39,11 @@
         />
       </div>
       <div class="brand-list flex flex-wrap gap-10 py-3 px-2">
-        <div class="brand">
+        <div class="brand hidden" id="moreBrand">
           <div class="brand-logo">
-            <img src="../backgrounds/Brands/adidas.png" alt="" />
+            <span>More</span>
           </div>
-          <span>Nike</span>
-        </div>
-        <div class="brand">
-          <div class="brand-logo">
-            <img src="../backgrounds/Brands/adidas.png" alt="" />
-          </div>
-          <span>Nike</span>
-        </div>
-        <div class="brand">
-          <div class="brand-logo">
-            <img src="../backgrounds/Brands/adidas.png" alt="" />
-          </div>
-          <span>Nike</span>
-        </div>
-        <div class="brand">
-          <div class="brand-logo">
-            <img src="../backgrounds/Brands/adidas.png" alt="" />
-          </div>
-          <span>Nike</span>
-        </div>
-        <div class="brand">
-          <div class="brand-logo">
-            <img src="../backgrounds/Brands/adidas.png" alt="" />
-          </div>
-          <span>Nike</span>
+          <span>More..</span>
         </div>
       </div>
       <div class="flex justify-between">
@@ -76,8 +53,7 @@
       <div
         class="brand-scroll overflow-x-auto py-1 flex items-center no-scrollbar gap-3 text-base font-semibold"
       >
-        <span>All</span><span>nike</span><span>adidas</span><span>rebok</span
-        ><span>nike</span><span>nike</span><span>nike</span>
+        <span class="all-brand-button">All</span>
       </div>
       <div class="products-wrapper flex flex-wrap gap-x-4 gap-y-6 pb-[68px]">
         <div class="product">
@@ -89,7 +65,9 @@
         </div>
       </div>
     </div>
-    <footer class="w-full h-[66px] px-12 flex gap-11 py-3 absolute bottom-0">
+    <footer
+      class="w-full h-[66px] px-12 flex gap-11 py-3 absolute bottom-0 bg-white"
+    >
       <div class="flex-col-center">
         <iconify-icon
           icon="octicon:home-24"

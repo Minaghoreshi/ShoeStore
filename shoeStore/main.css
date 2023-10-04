@@ -21,6 +21,10 @@
   .brand {
     @apply flex flex-col justify-center items-center gap-3 font-semibold text-sm;
   }
+  /* .brand span {
+    @apply max-w-[60px];
+  } */
+
   .shoe-image {
     @apply w-[182px] h-[182px] bg-[#F3F3F3] rounded-3xl flex items-center justify-center mb-3;
   }
@@ -31,7 +35,7 @@
     @apply flex flex-col;
   }
   .brand-scroll span {
-    @apply text-xl px-5 py-[10px] border-2 border-[#343A40] rounded-3xl;
+    @apply text-xl px-5 py-[10px] border-2 border-[#343A40] rounded-3xl whitespace-nowrap;
   }
   .brands-active {
     @apply bg-[#343A40] text-white;
