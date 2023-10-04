@@ -36,7 +36,12 @@
   .brands-active {
     @apply bg-[#343A40] text-white;
   }
-
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  footer span {
+    @apply text-[10px];
+  }
   @layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {
