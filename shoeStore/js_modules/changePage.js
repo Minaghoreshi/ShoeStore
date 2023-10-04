@@ -22,12 +22,19 @@ export function updateScreen(value) {
       "bottom-[119px]",
       "left-[163px]"
     );
+    const buttonContainer = document.createElement("div");
+    const button = document.createElement("button");
+    buttonContainer.append(button);
+    buttonContainer.classList.add("next-botton", "px-6");
+    button.classList.add("nextBtn");
+    button.textContent = "Next";
+    const progressBar = document.createElement("div");
     screenData.forEach((screen, index) => {
-      const progressBar = document.createElement("div");
       progressBar.classList.add("progressBar");
       if (index == value) {
         progressBar.style.backgroundColor = "#000";
       }
+
       progressContainer.insertAdjacentElement("beforeend", progressBar);
     });
     const html = `<div>
@@ -46,17 +53,19 @@ export function updateScreen(value) {
         <div class="progressBar"></div>
         <div class="progressBar"></div>
       </div>
-      <div class="next-botton px-6">
-        <button class="nextBtn">Next</button>
-      </div>
+     
     `;
     container.insertAdjacentHTML("beforeend", html);
     container.append(progressContainer);
+    container.append(buttonContainer);
     document.body.append(container);
 
     currentIndex++;
+    if (value == screenData.length - 1) {
+      button.textContent = "Start";
+    }
   } else if (value >= screenData.length) {
-    window.location.href = "http://127.0.0.1:5500/shoeStore/html/login.html";
+    window.location.assign("http://127.0.0.1:5500/shoeStore/html/login.html");
   }
 }
 export function NextBotton(e) {

@@ -28,7 +28,10 @@ export async function checkInput() {
   }
   if (emailValue != "") {
     let user = await getDatabyEmail(emailValue);
-    if (user.remember === "on") {
+    if (user && user.remember === "on") {
+      signinBtn.classList.remove("bg-gray-400");
+      signinBtn.classList.add("bg-black");
+      signinBtn.disabled = false;
       let pass = user.password;
       console.log(pass);
       document
@@ -61,11 +64,11 @@ export async function signinBtnClicked(e) {
     const formData = Object.fromEntries(new FormData(form).entries());
     let user = await getDatabyEmail(formData.email);
     if (formData.password != user.password) {
-      console.log("wrong Pass");
       passwordAlert.classList.remove("hidden");
     } else if (formData.password === user.password) {
       console.log("correct");
       passwordAlert.classList.add("hidden");
+      window.location.href = "http://127.0.0.1:5500/shoeStore/html/home.html";
     }
     console.log(user);
   }

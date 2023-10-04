@@ -15,4 +15,37 @@
   .nextBtn {
     @apply bg-black rounded-3xl text-white py-3 px-[173px] absolute left-[24px] bottom-[32px];
   }
+  .brand-logo {
+    @apply w-[60px] h-[60px] rounded-full bg-[#ECECEC] flex items-center justify-center flex-col;
+  }
+  .brand {
+    @apply flex flex-col justify-center items-center gap-3 font-semibold text-sm;
+  }
+  .shoe-image {
+    @apply w-[182px] h-[182px] bg-[#F3F3F3] rounded-3xl flex items-center justify-center mb-3;
+  }
+  .shoe-name {
+    @apply text-xl font-bold;
+  }
+  .product {
+    @apply flex flex-col;
+  }
+  .brand-scroll span {
+    @apply text-xl px-5 py-[10px] border-2 border-[#343A40] rounded-3xl;
+  }
+  .brands-active {
+    @apply bg-[#343A40] text-white;
+  }
+
+  @layer utilities {
+    @variants responsive {
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    }
+  }
 }
