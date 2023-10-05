@@ -28,8 +28,8 @@ export function updateScreen(value) {
     buttonContainer.classList.add("next-botton", "px-6");
     button.classList.add("nextBtn");
     button.textContent = "Next";
-    const progressBar = document.createElement("div");
     screenData.forEach((screen, index) => {
+      const progressBar = document.createElement("div");
       progressBar.classList.add("progressBar");
       if (index == value) {
         progressBar.style.backgroundColor = "#000";
@@ -48,11 +48,7 @@ export function updateScreen(value) {
           >${currentScreen.description}</span
         >
       </div>
-      <div class="progress flex gap-1.5 absolute bottom-[119px] left-[163px]">
-        <div class="progressBar"></div>
-        <div class="progressBar"></div>
-        <div class="progressBar"></div>
-      </div>
+      
      
     `;
     container.insertAdjacentHTML("beforeend", html);
