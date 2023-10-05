@@ -4,50 +4,316 @@
       "id": 1,
       "email": "ghoreishi45@gmail.com",
       "password": "12345abcd",
-      "remember": "on"
-    },
-    {
-      "id": 2,
-      "email": "testtest@gmail.com",
-      "password": "abcd12345",
-      "remember": "off"
+      "remember": "on",
+      "user-name": "Mina"
     }
   ],
-  "products": [
+  "brands": [
     {
       "id": 1,
-      "name": "Running Shoes",
-      "price": 79.99,
-      "description": "Comfortable running shoes for athletes.",
-      "image": "running_shoes.jpg"
+      "name": "Nike",
+      "src": "../backgrounds/Brands/nike.png",
+      "models": [
+        {
+          "id": 1,
+          "name": "Nike Model 1",
+          "description": "High-performance Nike shoes with advanced cushioning technology, designed for serious athletes. These running shoes provide exceptional comfort and support during workouts and races.",
+          "colors": ["Black", "White", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 50,
+          "price": 99.99
+        },
+        {
+          "id": 2,
+          "name": "Nike Model 2",
+          "description": "Casual Nike sneakers that combine style and comfort. Perfect for everyday wear, these shoes come in a variety of trendy colors to match your fashion sense.",
+          "colors": ["Blue", "Gray", "Green"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 40,
+          "price": 79.99
+        },
+        {
+          "id": 3,
+          "name": "Nike Model 3",
+          "description": "Stylish Nike footwear that's versatile for any occasion. With a sleek design and multiple color options, these shoes are a must-have addition to your collection.",
+          "colors": ["Black", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 60,
+          "price": 119.99
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Casual Sneakers",
-      "price": 49.99,
-      "description": "Stylish sneakers for everyday wear.",
-      "image": "casual_sneakers.jpg"
+      "name": "Adidas",
+      "src": "../backgrounds/Brands/adidas.png",
+      "models": [
+        {
+          "id": 4,
+          "name": "Adidas Model 1",
+          "description": "Adidas running shoes engineered for peak performance. These shoes provide excellent stability and support, making them ideal for competitive runners. Available in classic black, blue, and red.",
+          "colors": ["Black", "Blue", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 45,
+          "price": 89.99
+        },
+        {
+          "id": 5,
+          "name": "Adidas Model 2",
+          "description": "Adidas casual sneakers that offer a perfect blend of style and comfort. Experience all-day coziness with these fashionable kicks. Available in gray, green, and orange.",
+          "colors": ["Gray", "Green", "Orange"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 35,
+          "price": 69.99
+        },
+        {
+          "id": 6,
+          "name": "Adidas Model 3",
+          "description": "Adidas high-top sneakers with a modern twist. Elevate your style with these unique kicks. Available in black, white, and yellow.",
+          "colors": ["Black", "White", "Yellow"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 55,
+          "price": 109.99
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Hiking Boots",
-      "price": 99.99,
-      "description": "Durable hiking boots for outdoor adventures.",
-      "image": "hiking_boots.jpg"
+      "name": "Asics",
+      "src": "../backgrounds/Brands/asics.png",
+      "models": [
+        {
+          "id": 7,
+          "name": "Asics Model 1",
+          "description": "Asics performance shoes designed for athletes who demand the best. These shoes provide superior support, stability, and traction, making them ideal for competitive sports. Available in blue, yellow, and white.",
+          "colors": ["Blue", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 55,
+          "price": 94.99
+        },
+        {
+          "id": 8,
+          "name": "Asics Model 2",
+          "description": "Asics comfortable sneakers with a sleek and modern design. Experience a perfect blend of style and cushioned comfort with these shoes. Available in gray, purple, and red.",
+          "colors": ["Gray", "Purple", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 42,
+          "price": 79.99
+        },
+        {
+          "id": 9,
+          "name": "Asics Model 3",
+          "description": "Asics hiking shoes built for rugged terrain. These boots offer superior durability and protection during outdoor adventures. Available in brown, green, and black.",
+          "colors": ["Brown", "Green", "Black"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 60,
+          "price": 109.99
+        }
+      ]
     },
     {
       "id": 4,
-      "name": "Flip Flops",
-      "price": 19.99,
-      "description": "Comfortable flip flops for the beach.",
-      "image": "flip_flops.jpg"
+      "name": "Convers",
+      "src": "../backgrounds/Brands/convers.png",
+      "models": [
+        {
+          "id": 10,
+          "name": "Convers Model 1",
+          "description": "Classic Converse sneakers that never go out of style. These iconic shoes are comfortable and perfect for casual wear. Available in black, white, and red.",
+          "colors": ["Black", "White", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 38,
+          "price": 59.99
+        },
+        {
+          "id": 11,
+          "name": "Convers Model 2",
+          "description": "Converse high-top sneakers with a retro look. These shoes combine fashion and comfort effortlessly. Available in blue, gray, and green.",
+          "colors": ["Blue", "Gray", "Green"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 28,
+          "price": 69.99
+        },
+        {
+          "id": 12,
+          "name": "Convers Model 3",
+          "description": "Converse sneakers designed for skating enthusiasts. These shoes offer excellent grip and durability. Available in black, yellow, and white.",
+          "colors": ["Black", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 35,
+          "price": 79.99
+        }
+      ]
     },
     {
       "id": 5,
-      "name": "Formal Shoes",
-      "price": 129.99,
-      "description": "Elegant formal shoes for special occasions.",
-      "image": "formal_shoes.jpg"
+      "name": "DC",
+      "src": "../backgrounds/Brands/dc.png",
+      "models": [
+        {
+          "id": 13,
+          "name": "DC Model 1",
+          "description": "DC skate shoes with a bold and unique design. These shoes are perfect for skateboarders and urban enthusiasts. Available in black, blue, and red.",
+          "colors": ["Black", "Blue", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 43,
+          "price": 69.99
+        },
+        {
+          "id": 14,
+          "name": "DC Model 2",
+          "description": "DC sneakers that combine style and functionality. These shoes are suitable for various outdoor activities. Available in gray, green, and orange.",
+          "colors": ["Gray", "Green", "Orange"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 36,
+          "price": 79.99
+        },
+        {
+          "id": 15,
+          "name": "DC Model 3",
+          "description": "DC high-top shoes with extra ankle support. These shoes are perfect for skaters looking for added protection. Available in black, white, and yellow.",
+          "colors": ["Black", "White", "Yellow"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 50,
+          "price": 89.99
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Vans",
+      "src": "../backgrounds/Brands/vans.jpg",
+      "models": [
+        {
+          "id": 16,
+          "name": "Vans Model 1",
+          "description": "Classic Vans sneakers known for their timeless style. These shoes are comfortable and perfect for everyday wear. Available in black, white, and red.",
+          "colors": ["Black", "White", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 40,
+          "price": 59.99
+        },
+        {
+          "id": 17,
+          "name": "Vans Model 2",
+          "description": "Vans slip-on shoes that are easy to wear and stylish. These shoes are perfect for a casual and relaxed look. Available in blue, gray, and green.",
+          "colors": ["Blue", "Gray", "Green"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 32,
+          "price": 49.99
+        },
+        {
+          "id": 18,
+          "name": "Vans Model 3",
+          "description": "Vans high-top sneakers with a trendy design. These shoes are suitable for various activities. Available in black, yellow, and white.",
+          "colors": ["Black", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 48,
+          "price": 69.99
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "New B",
+      "src": "../backgrounds/Brands/newba.png",
+      "models": [
+        {
+          "id": 19,
+          "name": "New Balance Model 1",
+          "description": "New Balance running shoes designed for runners seeking stability and comfort. These shoes offer excellent arch support. Available in blue, yellow, and white.",
+          "colors": ["Blue", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 52,
+          "price": 89.99
+        },
+        {
+          "id": 20,
+          "name": "New Balance Model 2",
+          "description": "New Balance sneakers with a modern and sporty design. These shoes provide superior cushioning for all-day comfort. Available in gray, purple, and red.",
+          "colors": ["Gray", "Purple", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 46,
+          "price": 79.99
+        },
+        {
+          "id": 21,
+          "name": "New Balance Model 3",
+          "description": "New Balance high-performance shoes designed for athletes. These shoes offer superior comfort and support during workouts and races. Available in black, yellow, and white.",
+          "colors": ["Black", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 63,
+          "price": 109.99
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Puma",
+      "src": "../backgrounds/Brands/puma.png",
+      "models": [
+        {
+          "id": 22,
+          "name": "Puma Model 1",
+          "description": "Puma running shoes designed for speed and agility. These shoes are perfect for sprinters and track athletes. Available in black, blue, and red.",
+          "colors": ["Black", "Blue", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 44,
+          "price": 99.99
+        },
+        {
+          "id": 23,
+          "name": "Puma Model 2",
+          "description": "Puma sneakers with a sleek and modern design. These shoes are suitable for various outdoor activities. Available in gray, green, and orange.",
+          "colors": ["Gray", "Green", "Orange"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 40,
+          "price": 79.99
+        },
+        {
+          "id": 24,
+          "name": "Puma Model 3",
+          "description": "Puma high-top sneakers that combine style and functionality. These shoes offer excellent ankle support. Available in black, white, and yellow.",
+          "colors": ["Black", "White", "Yellow"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 51,
+          "price": 89.99
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Reebok",
+      "src": "../backgrounds/Brands/reebok.png",
+      "models": [
+        {
+          "id": 25,
+          "name": "Reebok Model 1",
+          "description": "Reebok running shoes designed for comfort and durability. These shoes provide excellent cushioning for long-distance runners. Available in blue, yellow, and white.",
+          "colors": ["Blue", "Yellow", "White"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 55,
+          "price": 94.99
+        },
+        {
+          "id": 26,
+          "name": "Reebok Model 2",
+          "description": "Reebok sneakers that offer a perfect blend of style and functionality. These shoes are suitable for various sports and activities. Available in gray, purple, and red.",
+          "colors": ["Gray", "Purple", "Red"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 47,
+          "price": 79.99
+        },
+        {
+          "id": 27,
+          "name": "Reebok Model 3",
+          "description": "Reebok high-top sneakers with a modern and trendy design. These shoes are perfect for fashion-forward individuals. Available in black, green, and orange.",
+          "colors": ["Black", "Green", "Orange"],
+          "sizes": ["41", "40", "39", "42", "43"],
+          "quantity": 49,
+          "price": 109.99
+        }
+      ]
     }
   ]
 }

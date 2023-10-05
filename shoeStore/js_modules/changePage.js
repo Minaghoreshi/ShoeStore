@@ -68,6 +68,7 @@ export function updateScreen(value) {
     window.location.assign("http://127.0.0.1:5500/shoeStore/html/login.html");
   }
 }
+
 export function NextBotton(e) {
   if (e.target.classList.contains("nextBtn")) {
     updateScreen(currentIndex);

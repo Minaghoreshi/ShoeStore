@@ -9,17 +9,20 @@ let allBrands = [];
 let isMoreButtonVisible = true;
 const brandsEndpoint = `http://localhost:3000/brands`;
 function createEachBrandCircle(data) {
+  const moreBtn = document.getElementById("moreBrand");
+
   let brand = document.createElement("div");
   brand.classList.add("brand");
-  let html = `
+  let html = `<div class="brand">
   <div class="brand-logo">
             <img src=${data.src} alt="" />
           </div>
-          <span>${data.name}</span>
+          <span>${data.name}</span> </div>
   `;
   brand.insertAdjacentHTML("afterbegin", html);
   brandListContainer.append(brand);
   brandListContainer.insertBefore(brand, moreBtn);
+  // brandListContainer.insertAdjacentHTML("afterbegin", html);
 }
 function createVisibleBrandsCircle(firstIndex, lastIndex) {
   // brandListContainer.innerHTML = "";
@@ -48,7 +51,10 @@ async function fillBrandsList(endpoint) {
     console.log(error);
   }
 }
-moreBtn.addEventListener("click", () => {
+
+moreBtn.addEventListener("click", moreBtnClick);
+function moreBtnClick() {
+  console.log("test");
   if (isMoreButtonVisible) {
     createVisibleBrandsCircle(7, allBrands.length);
     moreBtn.innerHTML = `<div class="brand-logo">
@@ -56,9 +62,21 @@ moreBtn.addEventListener("click", () => {
   </div>
   <span>Back..</span>`;
   } else if (!isMoreButtonVisible) {
-    // brandListContainer.innerHTML = "";
-    location.reload();
+    brandListContainer.innerHTML = "";
+    const html = ` <div class="brand " id="moreBrand">
+    <div class="brand-logo">
+    <span>More</span>
+    </div>
+    <span>More..</span>
+    </div>`;
+    brandListContainer.insertAdjacentHTML("afterbegin", html);
+    createVisibleBrandsCircle(0, 7);
+    const moreBtn = document.getElementById("moreBrand");
+    console.log(moreBtn);
+    moreBtn.addEventListener("click", moreBtnClick);
+
+    // location.reload();
   }
   isMoreButtonVisible = !isMoreButtonVisible;
-});
+}
 document.addEventListener("DOMContentLoaded", fillBrandsList(brandsEndpoint));
