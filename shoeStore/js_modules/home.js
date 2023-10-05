@@ -1,10 +1,11 @@
 import { getProductsData } from "./get-data.js";
-import { getAllModels, createCardPerProduct } from "./createCardPerProduct.js";
+import { createCardPerProduct, popularClick } from "./createCardPerProduct.js";
 import {
   brandListContainer,
   moreBtn,
   brandsScrollContainer,
   allBrand,
+  mostPopular,
 } from "./dom.js";
 let allBrands = [];
 let isMoreButtonVisible = true;
@@ -77,3 +78,4 @@ function moreBtnClick() {
 moreBtn.addEventListener("click", moreBtnClick);
 document.addEventListener("DOMContentLoaded", fillBrandsList(brandsEndpoint));
 document.addEventListener("DOMContentLoaded", createCardPerProduct);
+mostPopular.addEventListener("click", popularClick);
