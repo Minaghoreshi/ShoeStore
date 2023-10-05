@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4"
   }
 }

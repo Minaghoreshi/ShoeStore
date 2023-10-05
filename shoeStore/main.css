@@ -29,7 +29,7 @@
     @apply w-[182px] h-[182px] bg-[#F3F3F3] rounded-3xl flex items-center justify-center mb-3;
   }
   .shoe-name {
-    @apply text-xl font-bold;
+    @apply text-xl max-w-[182px] font-bold line-clamp-1;
   }
   .product {
     @apply flex flex-col;

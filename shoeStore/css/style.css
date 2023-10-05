@@ -641,6 +641,11 @@ video {
 }
 
 .shoe-name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  max-width: 182px;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -686,6 +691,10 @@ footer span {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
@@ -734,6 +743,13 @@ footer span {
 
 .mt-96 {
   margin-top: 24rem;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .flex {

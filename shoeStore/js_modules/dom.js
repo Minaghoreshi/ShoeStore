@@ -11,3 +11,4 @@ export const brandListContainer = document.querySelector(".brand-list");
 export const moreBtn = document.getElementById("moreBrand");
 export const brandsScrollContainer = document.querySelector(".brand-scroll");
 export const allBrand = document.querySelector(".all-brand-button");
+export const productsWrapper = document.querySelector(".products-wrapper");

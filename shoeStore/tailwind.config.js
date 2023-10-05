@@ -25,7 +25,16 @@ module.exports = {
           "100%": { transform: "translateX(0)" }, // Slide in to the original position
         },
       }),
+      // lineClamp: {
+      //   7: "7",
+      //   8: "8",
+      //   9: "9",
+      //   10: "10",
+      // },
     },
   },
-  plugins: [],
+  // variants: {
+  //   lineClamp: ["responsive", "hover"],
+  // },
+  // plugins: [require("@tailwindcss/line-clamp")],
 };

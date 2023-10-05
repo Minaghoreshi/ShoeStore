@@ -1,4 +1,5 @@
 import { getProductsData } from "./get-data.js";
+import { getAllModels, createCardPerProduct } from "./createCardPerProduct.js";
 import {
   brandListContainer,
   moreBtn,
@@ -41,7 +42,6 @@ function createBrandScrollBars() {
 async function fillBrandsList(endpoint) {
   try {
     allBrands = await getProductsData(endpoint);
-    console.log(allBrands);
     if (allBrands.length > 7) {
       createVisibleBrandsCircle(0, 7);
       moreBtn.classList.remove("hidden");
@@ -52,9 +52,7 @@ async function fillBrandsList(endpoint) {
   }
 }
 
-moreBtn.addEventListener("click", moreBtnClick);
 function moreBtnClick() {
-  console.log("test");
   if (isMoreButtonVisible) {
     createVisibleBrandsCircle(7, allBrands.length);
     moreBtn.innerHTML = `<div class="brand-logo">
@@ -72,11 +70,10 @@ function moreBtnClick() {
     brandListContainer.insertAdjacentHTML("afterbegin", html);
     createVisibleBrandsCircle(0, 7);
     const moreBtn = document.getElementById("moreBrand");
-    console.log(moreBtn);
     moreBtn.addEventListener("click", moreBtnClick);
-
-    // location.reload();
   }
   isMoreButtonVisible = !isMoreButtonVisible;
 }
+moreBtn.addEventListener("click", moreBtnClick);
 document.addEventListener("DOMContentLoaded", fillBrandsList(brandsEndpoint));
+document.addEventListener("DOMContentLoaded", createCardPerProduct);
