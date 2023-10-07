@@ -1,5 +1,10 @@
 import { getProductsData } from "./get-data.js";
-import { createCardPerProduct, popularClick } from "./createCardPerProduct.js";
+// import { showProductsOfSelectedBrand } from "./brands-click.js";
+import {
+  createCardPerProduct,
+  popularClick,
+  showProductsOfSelectedBrand,
+} from "./createCardPerProduct.js";
 import {
   brandListContainer,
   moreBtn,
@@ -15,9 +20,9 @@ function createEachBrandCircle(data) {
 
   let brand = document.createElement("div");
   brand.classList.add("brand");
-  let html = `<div class="brand">
-  <div class="brand-logo">
-            <img src=${data.src} alt="" />
+  let html = `<div class="brand" >
+  <div class="brand-logo category" id="${data.name}">
+            <img src=${data.src} alt="" id="${data.name}" />
           </div>
           <span>${data.name}</span> </div>
   `;
@@ -36,6 +41,7 @@ function createVisibleBrandsCircle(firstIndex, lastIndex) {
 function createBrandScrollBars() {
   allBrands.forEach((brand) => {
     let brandspan = document.createElement("span");
+    brandspan.setAttribute("id", brand.name);
     brandspan.textContent = brand.name;
     brandsScrollContainer.append(brandspan);
   });
@@ -79,3 +85,4 @@ moreBtn.addEventListener("click", moreBtnClick);
 document.addEventListener("DOMContentLoaded", fillBrandsList(brandsEndpoint));
 document.addEventListener("DOMContentLoaded", createCardPerProduct);
 mostPopular.addEventListener("click", popularClick);
+document.addEventListener("click", showProductsOfSelectedBrand);

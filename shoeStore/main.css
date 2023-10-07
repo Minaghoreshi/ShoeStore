@@ -45,6 +45,9 @@
   footer span {
     @apply text-[10px];
   }
+  .select {
+    @apply bg-black text-white;
+  }
   @layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {

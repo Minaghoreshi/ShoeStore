@@ -1,3 +1,7 @@
+export const brandsEndpoint = `http://localhost:3000/brands`;
+export const popularEndpoint = `  http://localhost:3000/most-popular`;
+export const userEndpoint = `  http://localhost:3000/users`;
+
 export const screenData = [
   {
     img: "../backgrounds/WallpaperDog-20534536 1.png",

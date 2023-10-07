@@ -233,7 +233,7 @@
     },
     {
       "id": 7,
-      "name": "New B",
+      "name": "New-B",
       "src": "../backgrounds/Brands/newba.png",
       "models": [
         {
@@ -343,5 +343,5 @@
       ]
     }
   ],
-  "most-popular": [16, 10, 11, 4, 27]
+  "most-popular": [15, 1, 12, 4, 27]
 }
