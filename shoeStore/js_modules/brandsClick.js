@@ -5,6 +5,8 @@ import { createProductCard } from "./createProductCard.js";
 
 //reload page and all products are visible
 export async function createCardPerProduct() {
+  mostPopular.classList.remove("text-red-600");
+  mostPopular.classList.add("text-black");
   const allModels = await getProductsData(brandsEndpoint);
   productsWrapper.innerHTML = "";
   let dataModels = [];
@@ -21,6 +23,7 @@ export async function createCardPerProduct() {
 }
 //click on most popular and popular product visible
 export async function popularClick() {
+  mostPopular.classList.remove("text-black");
   mostPopular.classList.add("text-red-600");
   try {
     const allModels = await getProductsData(brandsEndpoint);
@@ -83,6 +86,8 @@ export function redirectToProductDetailsPage(id) {
   window.location.href = `http://127.0.0.1:5500/shoeStore/html/productDetail.html?id=${id}`;
 }
 async function showSelectedBrandOfScrllBar(id) {
+  mostPopular.classList.remove("text-red-600");
+  mostPopular.classList.add("text-black");
   let result = [];
   let allbrands = await getProductsData(brandsEndpoint);
 

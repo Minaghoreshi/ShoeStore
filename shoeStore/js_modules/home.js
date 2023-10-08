@@ -11,9 +11,20 @@ import {
   allBrand,
   mostPopular,
 } from "./dom.js";
+const home = document.querySelector(".home-botton");
+const allIcons = document.querySelectorAll("iconify-icon");
 let allBrands = [];
 let isMoreButtonVisible = true;
 const brandsEndpoint = `http://localhost:3000/brands`;
+//need to be completed for changing the color of icons
+function whitenIconsBackgroundColor() {
+  console.log(allIcons);
+  allIcons.forEach((icon) => {
+    icon.classList.add("text-black");
+  });
+}
+// whitenIconsBackgroundColor();
+
 function createEachBrandCircle(data) {
   const moreBtn = document.getElementById("moreBrand");
 
@@ -85,3 +96,6 @@ document.addEventListener("DOMContentLoaded", fillBrandsList(brandsEndpoint));
 document.addEventListener("DOMContentLoaded", createCardPerProduct);
 mostPopular.addEventListener("click", popularClick);
 document.addEventListener("click", showProductsOfSelectedBrand);
+document
+  .querySelector(".home-botton")
+  .addEventListener("click", createCardPerProduct);
