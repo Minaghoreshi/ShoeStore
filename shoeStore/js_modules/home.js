@@ -1,10 +1,9 @@
 import { getProductsData } from "./get-data.js";
-// import { showProductsOfSelectedBrand } from "./brands-click.js";
 import {
   createCardPerProduct,
   popularClick,
   showProductsOfSelectedBrand,
-} from "./createCardPerProduct.js";
+} from "./brandsClick.js";
 import {
   brandListContainer,
   moreBtn,

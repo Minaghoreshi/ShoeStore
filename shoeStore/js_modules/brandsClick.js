@@ -1,9 +1,10 @@
 import { getProductsData } from "./get-data.js";
 import { productsWrapper, mostPopular, brandsScrollContainer } from "./dom.js";
 import { brandsEndpoint, popularEndpoint } from "./util.js";
+import { createProductCard } from "./createProductCard.js";
 
 //reload page and all products are visible
-export async function createCardPerProduct(value) {
+export async function createCardPerProduct() {
   const allModels = await getProductsData(brandsEndpoint);
   productsWrapper.innerHTML = "";
   let dataModels = [];
@@ -13,17 +14,7 @@ export async function createCardPerProduct(value) {
   dataModels.sort(() => Math.random() - 0.5);
 
   try {
-    dataModels.forEach((model) => {
-      let product = document.createElement("div");
-      product.classList.add("product");
-      const html = `<div class="shoe-image">
-    <img src="${model.img[0]}" alt="" />
-  </div>
-  <span class="shoe-name">${model.name}</span>
-  <span>${model.price}</span>`;
-      product.insertAdjacentHTML("beforeend", html);
-      productsWrapper.append(product);
-    });
+    createProductCard(dataModels);
   } catch (error) {
     console.log(error);
   }
@@ -44,19 +35,8 @@ export async function popularClick() {
     });
 
     let result = allModelsData.filter((model) => popularIds.includes(model.id));
-    console.log(result);
-    productsWrapper.innerHTML = "";
-    result.forEach((model) => {
-      let product = document.createElement("div");
-      product.classList.add("product");
-      const html = `<div class="shoe-image">
-  <img  src="${model.img[0]}" alt="image" class="shoe" />
-</div>
-<span class="shoe-name">${model.name}</span>
-<span>${model.price}</span>`;
-      product.insertAdjacentHTML("beforeend", html);
-      productsWrapper.append(product);
-    });
+
+    createProductCard(result);
   } catch (error) {
     console.log(error);
   }
@@ -72,21 +52,21 @@ function changeSpanBackground(id) {
 }
 //hande different clicks on documet
 export async function showProductsOfSelectedBrand(e) {
-  console.log(e.target);
   let id = e.target.id;
   //click on brand name in the up of the page that redirect to another page
   if (
     e.target.classList.contains("category") ||
     e.target.parentNode.classList.contains("category")
   ) {
-    redirectToBrandPage();
-    console.log("clicked");
+    redirectToBrandPage(id);
+    console.log(e.target.id);
+    console.log(id);
   } else if (
     e.target.parentNode.classList.contains("product") ||
     e.target.parentNode.classList.contains("shoe-image")
   ) {
-    console.log("hey");
-    redirectToProductDetailsPage();
+    console.log(e.target);
+    redirectToProductDetailsPage(id);
   }
   //click on brands name on scroll bar that shows the selected brands products
   else if (e.target.parentNode.classList.contains("brand-scroll")) {
@@ -98,8 +78,9 @@ export async function showProductsOfSelectedBrand(e) {
     }
   }
 }
-export function redirectToProductDetailsPage() {
+export function redirectToProductDetailsPage(id) {
   console.log("show product Detail Page");
+  window.location.href = `http://127.0.0.1:5500/shoeStore/html/productDetail.html?id=${id}`;
 }
 async function showSelectedBrandOfScrllBar(id) {
   let result = [];
@@ -107,20 +88,8 @@ async function showSelectedBrandOfScrllBar(id) {
 
   let selectedBrand = allbrands.find((brand) => brand.name == id);
   result.push(...selectedBrand.models);
-
-  productsWrapper.innerHTML = "";
-  result.forEach((model) => {
-    let product = document.createElement("div");
-    product.classList.add("product");
-    const html = `<div class="shoe-image">
-  <img src="${model.img[0]}" alt="" />
-  </div>
-  <span class="shoe-name">${model.name}</span>
-  <span>${model.price}</span>`;
-    product.insertAdjacentHTML("beforeend", html);
-    productsWrapper.append(product);
-  });
+  createProductCard(result);
 }
-async function redirectToBrandPage() {
-  console.log("go to next page");
+async function redirectToBrandPage(id) {
+  window.location.href = `http://127.0.0.1:5500/shoeStore/html/brand.html?brand=${id}`;
 }
