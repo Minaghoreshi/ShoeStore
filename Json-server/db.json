@@ -22,7 +22,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 50,
           "price": 99.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 2,
@@ -32,7 +35,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 40,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 3,
@@ -42,7 +48,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 60,
           "price": 119.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -59,7 +68,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 45,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 5,
@@ -69,7 +81,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 35,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 6,
@@ -79,7 +94,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 55,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -96,7 +114,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 55,
           "price": 94.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 8,
@@ -106,7 +127,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 42,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 9,
@@ -116,7 +140,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 60,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -133,7 +160,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 38,
           "price": 59.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 11,
@@ -143,7 +173,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 28,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 12,
@@ -153,7 +186,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 35,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -170,7 +206,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 43,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 14,
@@ -180,7 +219,14 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 36,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"]
+          "img": [
+            "../backgrounds/products/Rectangle 6 (2).png",
+            "../backgrounds/products/Rectangle 6 (3).png",
+            "../backgrounds/products/Rectangle 6 (1).png"
+          ],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 15,
@@ -190,7 +236,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 50,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -207,7 +256,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 40,
           "price": 59.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 17,
@@ -217,7 +269,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 32,
           "price": 49.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 18,
@@ -227,7 +282,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 48,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -244,7 +302,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 52,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 20,
@@ -254,7 +315,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 46,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 21,
@@ -264,7 +328,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 63,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -281,7 +348,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 44,
           "price": 99.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 23,
@@ -291,7 +361,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 40,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 24,
@@ -301,7 +374,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 51,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     },
@@ -318,7 +394,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 55,
           "price": 94.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 26,
@@ -328,7 +407,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 47,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         },
         {
           "id": 27,
@@ -338,7 +420,10 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 49,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"]
+          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "reviews": 6500,
+          "sold": 120,
+          "rate": 4.3
         }
       ]
     }

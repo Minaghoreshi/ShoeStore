@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
+    <script defer type="module" src="../js_modules/productDeail.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -42,29 +42,29 @@
             />
           </div>
           <!-- Item 3 -->
-          <div class="hidden ease-in-out" data-carousel-item>
+          <!-- <div class="hidden ease-in-out" data-carousel-item>
             <img
               src="/docs/images/carousel/carousel-3.svg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
-          </div>
+          </div> -->
           <!-- Item 4 -->
-          <div class="hidden ease-in-out" data-carousel-item>
+          <!-- <div class="hidden ease-in-out" data-carousel-item>
             <img
               src="/docs/images/carousel/carousel-4.svg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
-          </div>
+          </div> -->
           <!-- Item 5 -->
-          <div class="hidden ease-in-out" data-carousel-item>
+          <!-- <div class="hidden ease-in-out" data-carousel-item>
             <img
               src="/docs/images/carousel/carousel-5.svg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
-          </div>
+          </div> -->
         </div>
         <!-- Slider indicators -->
         <div
@@ -77,34 +77,34 @@
             aria-label="Slide 1"
             data-carousel-slide-to="0"
           ></button>
-          <button
+          <!-- <button
             type="button"
             class="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 2"
             data-carousel-slide-to="1"
-          ></button>
-          <button
+          ></button> -->
+          <!-- <button
             type="button"
             class="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 3"
             data-carousel-slide-to="2"
-          ></button>
-          <button
+          ></button> -->
+          <!-- <button
             type="button"
             class="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 4"
             data-carousel-slide-to="3"
-          ></button>
-          <button
+          ></button> -->
+          <!-- <button
             type="button"
             class="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 5"
             data-carousel-slide-to="4"
-          ></button>
+          ></button> -->
         </div>
         <!-- Slider controls -->
         <button
@@ -153,27 +153,22 @@
       <div class="wrapper pt-10 px-6">
         <div class="product-name flex flex-col gap-3">
           <div>
-            <span class="text-[32px] font-bold">Soe Name</span
+            <span class="shoe-title text-[30px] font-bold"></span
             ><i class="fa fa-heart-o"></i>
           </div>
           <div class="flex items-center gap-1">
-            <div
-              class="bg-gray-200 rounded-lg text-xs flex items-center justify-center p-2 px-3"
+            <span
+              class="sold-value bg-gray-200 rounded-lg text-xs flex items-center justify-center p-2 px-3"
             >
-              549 sold
-            </div>
+            </span>
             <div class="ml-3"><i class="fa-solid fa-star-half-stroke"></i></div>
-            <span class="text-xs text-gray-500">4.3 (5,439 Reveiews)</span>
+            <span class="rate-review text-xs text-gray-500"></span>
           </div>
         </div>
         <div class="h-[2px] w-full my-5 bg-gray-100"></div>
         <div class="description flex flex-col gap-3">
           <span class="text-xl font-semibold">Description</span>
-          <span class="text-gray-500 line-clamp-2"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-            ipsa!dolor sit amet consectetur adipisicing elit. Nostrum,
-            ipsa!</span
-          >
+          <span class="product-description text-gray-500 line-clamp-2"></span>
         </div>
         <div class="flex w-full py-5 gap-5 justify-between">
           <div class="">
