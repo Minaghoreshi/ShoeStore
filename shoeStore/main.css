@@ -34,7 +34,10 @@
     @apply flex flex-col;
   }
   .size-circle {
-    @apply border-2 border-black min-w-[40px] h-10 flex items-center justify-center rounded-full;
+    @apply border-2 border-gray-600 min-w-[40px] h-10 flex items-center justify-center rounded-full;
+  }
+  .color-circle {
+    @apply min-w-[40px] h-10 flex items-center justify-center rounded-full;
   }
   .brand-scroll span {
     @apply text-xl px-5 py-[10px] border-2 border-[#343A40] rounded-3xl whitespace-nowrap;
