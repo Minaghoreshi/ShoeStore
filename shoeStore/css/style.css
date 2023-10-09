@@ -3033,6 +3033,11 @@ footer span {
   padding-bottom: 1.25rem;
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .pb-\[68px\] {
   padding-bottom: 68px;
 }

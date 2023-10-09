@@ -14,6 +14,10 @@ let sizeSection = document.querySelector(".size-section");
 let colorSection = document.querySelector(".color-section");
 let carouselImageContainer = document.querySelector(".img-container");
 let carouselBtn = document.querySelector(".carousel-button");
+let increaseButton = document.querySelector(".increase");
+let decreaseButton = document.querySelector(".decrease");
+let totalPrice = document.querySelector(".price");
+let quantity = document.querySelector(".quantity");
 
 //back to home page
 document.querySelector(".back-botton").addEventListener("click", () => {
@@ -42,6 +46,10 @@ async function getRawPrice() {
   let product = await getproductById(id);
   return product.price;
 }
+async function getTotalQuantity() {
+  let product = await getproductById(id);
+  return product.quantity;
+}
 //fill name,description,rates,...
 async function fillProductDetails() {
   try {
@@ -55,7 +63,7 @@ async function fillProductDetails() {
   }
 }
 //function for change the color of the selected color snd size and save the selected in variables
-function clickHandle(e) {
+async function clickHandle(e) {
   if (e.target.classList.contains("size-circle")) {
     selectedSize = e.target.textContent;
     changeSelectedSizeStyle();
@@ -69,6 +77,28 @@ function clickHandle(e) {
     carouselImageContainer.innerHTML = "";
     createCareousleImages(currntImageIndex);
     createCarouseButtons(currntImageIndex);
+  } else if (e.target.classList.contains("decrease")) {
+    let price = await getRawPrice();
+    if (counter > 0) {
+      counter--;
+      quantity.innerHTML = counter;
+      let total = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${total}`;
+    } else if (counter == 0) {
+      quantity.innerHTML = counter;
+      let total = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${total}`;
+    }
+  } else if (e.target.classList.contains("increase")) {
+    let price = await getRawPrice();
+    let totalQuantity = await getTotalQuantity();
+
+    if (totalQuantity > counter) {
+      counter++;
+      quantity.innerHTML = counter;
+      let total = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${total}`;
+    }
   }
 }
 //resetting style of size and color circles
