@@ -23,7 +23,12 @@
   /* .brand span {
     @apply max-w-[60px];
   } */
-
+  .carouselBtn {
+    @apply w-4 h-[15px] bg-gray-300 rounded-3xl;
+  }
+  .carousel-img {
+    @apply h-full w-full object-cover;
+  }
   .shoe-image {
     @apply w-[182px] h-[182px] bg-[#F3F3F3] rounded-3xl flex items-center justify-center mb-3;
   }

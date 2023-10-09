@@ -3,16 +3,23 @@ import { brandsEndpoint, userEndpoint } from "./util.js";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let selectedSize;
+let selectedColor;
+let currntImageIndex = 0;
+let counter = 0;
 let shoeName = document.querySelector(".shoe-title");
 let sold = document.querySelector(".sold-value");
 let rate = document.querySelector(".rate-review");
 let description = document.querySelector(".product-description");
 let sizeSection = document.querySelector(".size-section");
 let colorSection = document.querySelector(".color-section");
+let carouselImageContainer = document.querySelector(".img-container");
+let carouselBtn = document.querySelector(".carousel-button");
 
+//back to home page
 document.querySelector(".back-botton").addEventListener("click", () => {
   window.location.href = `http://127.0.0.1:5500/shoeStore/html/home.html`;
 });
+//get the data of product from id in urlparams
 async function getproductById(id) {
   let result;
   try {
@@ -29,6 +36,13 @@ async function getproductById(id) {
     console.log(error);
   }
 }
+
+//get price
+async function getRawPrice() {
+  let product = await getproductById(id);
+  return product.price;
+}
+//fill name,description,rates,...
 async function fillProductDetails() {
   try {
     let product = await getproductById(id);
@@ -40,20 +54,36 @@ async function fillProductDetails() {
     console.log(error);
   }
 }
-function sizeClicked(e) {
+//function for change the color of the selected color snd size and save the selected in variables
+function clickHandle(e) {
   if (e.target.classList.contains("size-circle")) {
     selectedSize = e.target.textContent;
-    changeSizeStyle();
+    changeSelectedSizeStyle();
     e.target.classList.add("bg-black", "text-white");
+  } else if (e.target.classList.contains("color-circle")) {
+    selectedColor = e.target.id;
+    changeSelectedColorStyle();
+    e.target.innerHTML = " &check;";
+  } else if (e.target.classList.contains("carouselBtn")) {
+    let currntImageIndex = e.target.id.split("-")[1];
+    carouselImageContainer.innerHTML = "";
+    createCareousleImages(currntImageIndex);
+    createCarouseButtons(currntImageIndex);
   }
 }
-function changeSizeStyle() {
+//resetting style of size and color circles
+function changeSelectedSizeStyle() {
   let sizeNode = document.querySelectorAll(".size-circle");
   sizeNode.forEach((node) => {
     node.classList.remove("bg-black", "text-white");
   });
 }
+function changeSelectedColorStyle() {
+  let colorNode = document.querySelectorAll(".color-circle");
+  colorNode.forEach((node) => (node.innerHTML = ""));
+}
 
+//create size circle for each size in produt data
 async function createSizeSection() {
   let product = await getproductById(id);
   let size = [...product.sizes];
@@ -65,32 +95,62 @@ async function createSizeSection() {
     sizeSection.append(sizeDiv);
   });
 }
+//create color circle for each color in produt data
 async function createColorSection() {
   let product = await getproductById(id);
   let colors = [...product.colors];
   colors = colors.map((color) => color.toLowerCase());
-  console.log(colors);
   colors.forEach((color) => {
     let colorDiv = document.createElement("div");
+    colorDiv.setAttribute("id", color);
     if (color == "black") {
-      colorDiv.classList.add("color-circle", `bg-${color}`);
+      colorDiv.classList.add("color-circle", `bg-${color}`, "text-white");
     } else if (color == "white") {
       colorDiv.classList.add(
+        "text-black",
         "color-circle",
         `bg-${color}`,
         "border-2",
         "border-gray-600"
       );
     } else {
-      colorDiv.classList.add("color-circle", `bg-${color}-600`);
-      console.log(colorDiv.classList);
+      colorDiv.classList.add("color-circle", `bg-${color}-600`, "text-white");
     }
     colorSection.append(colorDiv);
   });
 }
+//function for creating the buttons of carousel
+async function createCarouseButtons(value) {
+  carouselBtn.innerHTML = "";
+  let product = await getproductById(id);
+  let productImages = [...product.img];
+  productImages.forEach((img, index) => {
+    let btn = document.createElement("span");
+    btn.classList.add("carouselBtn");
+    btn.setAttribute("id", `img-${index}`);
+    if (index == value) {
+      btn.classList.add("w-11", "bg-black");
+    }
+    carouselBtn.append(btn);
+  });
+}
+//function for filling the image according to index
+async function createCareousleImages(index) {
+  let product = await getproductById(id);
+  let productImages = [...product.img];
+  let image = document.createElement("img");
+  image.classList.add("carousel-img");
+  image.setAttribute("src", productImages[index]);
+  carouselImageContainer.append(image);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  currntImageIndex = 0;
   fillProductDetails();
   createColorSection();
   createSizeSection();
+  createCarouseButtons(currntImageIndex);
+  createCareousleImages(currntImageIndex);
 });
-document.addEventListener("click", sizeClicked);
+
+document.addEventListener("click", clickHandle);

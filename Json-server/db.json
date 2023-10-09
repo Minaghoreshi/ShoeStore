@@ -22,7 +22,12 @@
           "sizes": ["41", "40", "39", "42", "43"],
           "quantity": 50,
           "price": 99.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (1).png",
+            "../backgrounds/products/Rectangle 6 (2).png",
+            "../backgrounds/products/Rectangle 6 (3).png",
+            "../backgrounds/products/Rectangle 6 (4).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
