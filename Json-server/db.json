@@ -5,7 +5,39 @@
       "email": "ghoreishi45@gmail.com",
       "password": "12345abcd",
       "remember": "on",
-      "user-name": "Mina"
+      "user-name": "Mina",
+      "orders": [
+        {
+          "id": 1,
+          "color": "red",
+          "orderId": 7,
+          "quantity": 2,
+          "size": 40,
+          "totalPrice": 199.98
+        },
+        {
+          "id": 2,
+          "orderId": 6,
+          "color": "green",
+          "quantity": 1,
+          "size": 39,
+          "totalPrice": 199.98
+        },
+        {
+          "orderId": "1",
+          "color": "black",
+          "quantity": 2,
+          "size": "41",
+          "totalPrice": "199.98"
+        },
+        {
+          "orderId": "27",
+          "color": "green",
+          "quantity": 2,
+          "size": "40",
+          "totalPrice": "219.98"
+        }
+      ]
     }
   ],
   "brands": [
@@ -18,8 +50,18 @@
           "id": 1,
           "name": "Air Jordan 1 Low SE",
           "description": "High-performance Nike shoes with advanced cushioning technology, designed for serious athletes. These running shoes provide exceptional comfort and support during workouts and races.",
-          "colors": ["Black", "White", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 50,
           "price": 99.99,
           "img": [
@@ -36,11 +78,23 @@
           "id": 2,
           "name": "Nike Dunk Low",
           "description": "Casual Nike sneakers that combine style and comfort. Perfect for everyday wear, these shoes come in a variety of trendy colors to match your fashion sense.",
-          "colors": ["Blue", "Gray", "Green"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Gray",
+            "Green"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 40,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (2).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -49,11 +103,23 @@
           "id": 3,
           "name": "Nike Court Legacy Lift",
           "description": "Stylish Nike footwear that's versatile for any occasion. With a sleek design and multiple color options, these shoes are a must-have addition to your collection.",
-          "colors": ["Black", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 60,
           "price": 119.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (3).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -69,11 +135,23 @@
           "id": 4,
           "name": "Adidas Superstar",
           "description": "Adidas running shoes engineered for peak performance. These shoes provide excellent stability and support, making them ideal for competitive runners. Available in classic black, blue, and red.",
-          "colors": ["Black", "Blue", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Blue",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 45,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (4).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -82,11 +160,23 @@
           "id": 5,
           "name": "Adidas Stan Smith",
           "description": "Adidas casual sneakers that offer a perfect blend of style and comfort. Experience all-day coziness with these fashionable kicks. Available in gray, green, and orange.",
-          "colors": ["Gray", "Green", "Orange"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Green",
+            "Orange"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 35,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (5).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -95,11 +185,23 @@
           "id": 6,
           "name": "Adidas Men's Crazy 8",
           "description": "Adidas high-top sneakers with a modern twist. Elevate your style with these unique kicks. Available in black, white, and yellow.",
-          "colors": ["Black", "White", "Yellow"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Yellow"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 55,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (6).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -115,11 +217,23 @@
           "id": 7,
           "name": "GEL-QUANTUM 180 VII HYBRID",
           "description": "Asics performance shoes designed for athletes who demand the best. These shoes provide superior support, stability, and traction, making them ideal for competitive sports. Available in blue, yellow, and white.",
-          "colors": ["Blue", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 55,
           "price": 94.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (1).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -128,11 +242,23 @@
           "id": 8,
           "name": "GT-1000 12 LITE-SHOW",
           "description": "Asics comfortable sneakers with a sleek and modern design. Experience a perfect blend of style and cushioned comfort with these shoes. Available in gray, purple, and red.",
-          "colors": ["Gray", "Purple", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Purple",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 42,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (2).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -141,11 +267,23 @@
           "id": 9,
           "name": "GEL-NYC",
           "description": "Asics hiking shoes built for rugged terrain. These boots offer superior durability and protection during outdoor adventures. Available in brown, green, and black.",
-          "colors": ["Brown", "Green", "Black"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Brown",
+            "Green",
+            "Black"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 60,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (3).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -161,11 +299,23 @@
           "id": 10,
           "name": "Chuck 70 Canvas",
           "description": "Classic Converse sneakers that never go out of style. These iconic shoes are comfortable and perfect for casual wear. Available in black, white, and red.",
-          "colors": ["Black", "White", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 38,
           "price": 59.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (4).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -174,11 +324,23 @@
           "id": 11,
           "name": "Chuck Taylor All Star",
           "description": "Converse high-top sneakers with a retro look. These shoes combine fashion and comfort effortlessly. Available in blue, gray, and green.",
-          "colors": ["Blue", "Gray", "Green"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Gray",
+            "Green"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 28,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (5).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -187,11 +349,23 @@
           "id": 12,
           "name": "Jack Purcell Leather",
           "description": "Converse sneakers designed for skating enthusiasts. These shoes offer excellent grip and durability. Available in black, yellow, and white.",
-          "colors": ["Black", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 35,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (6).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -207,11 +381,23 @@
           "id": 13,
           "name": "Men's Stag Shoes",
           "description": "DC skate shoes with a bold and unique design. These shoes are perfect for skateboarders and urban enthusiasts. Available in black, blue, and red.",
-          "colors": ["Black", "Blue", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Blue",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 43,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (1).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -220,8 +406,18 @@
           "id": 14,
           "name": "Men's Peary Tr Boots",
           "description": "DC sneakers that combine style and functionality. These shoes are suitable for various outdoor activities. Available in gray, green, and orange.",
-          "colors": ["Gray", "Green", "Orange"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Green",
+            "Orange"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 36,
           "price": 79.99,
           "img": [
@@ -237,11 +433,23 @@
           "id": 15,
           "name": "Men's Spectre Needles Shoes",
           "description": "DC high-top shoes with extra ankle support. These shoes are perfect for skaters looking for added protection. Available in black, white, and yellow.",
-          "colors": ["Black", "White", "Yellow"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Yellow"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 50,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (3).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -257,11 +465,23 @@
           "id": 16,
           "name": "Vans Sk8-Hi “Black/White”",
           "description": "Classic Vans sneakers known for their timeless style. These shoes are comfortable and perfect for everyday wear. Available in black, white, and red.",
-          "colors": ["Black", "White", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 40,
           "price": 59.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (4).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -270,11 +490,23 @@
           "id": 17,
           "name": "Vans Classic Slip-On “Checkerboard",
           "description": "Vans slip-on shoes that are easy to wear and stylish. These shoes are perfect for a casual and relaxed look. Available in blue, gray, and green.",
-          "colors": ["Blue", "Gray", "Green"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Gray",
+            "Green"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 32,
           "price": 49.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (5).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -283,11 +515,23 @@
           "id": 18,
           "name": "Vans Old Skool “Black/White",
           "description": "Vans high-top sneakers with a trendy design. These shoes are suitable for various activities. Available in black, yellow, and white.",
-          "colors": ["Black", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 48,
           "price": 69.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (6).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -303,11 +547,23 @@
           "id": 19,
           "name": "New Balance 574",
           "description": "New Balance running shoes designed for runners seeking stability and comfort. These shoes offer excellent arch support. Available in blue, yellow, and white.",
-          "colors": ["Blue", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 52,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (1).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -316,11 +572,23 @@
           "id": 20,
           "name": "New Balance 247",
           "description": "New Balance sneakers with a modern and sporty design. These shoes provide superior cushioning for all-day comfort. Available in gray, purple, and red.",
-          "colors": ["Gray", "Purple", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Purple",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 46,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (2).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -329,11 +597,23 @@
           "id": 21,
           "name": "New Balance Men's 1500",
           "description": "New Balance high-performance shoes designed for athletes. These shoes offer superior comfort and support during workouts and races. Available in black, yellow, and white.",
-          "colors": ["Black", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 63,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (3).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -349,11 +629,23 @@
           "id": 22,
           "name": "PUMA Carina ",
           "description": "Puma running shoes designed for speed and agility. These shoes are perfect for sprinters and track athletes. Available in black, blue, and red.",
-          "colors": ["Black", "Blue", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Blue",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 44,
           "price": 99.99,
-          "img": ["../backgrounds/products/Rectangle 6 (4).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (4).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -362,11 +654,23 @@
           "id": 23,
           "name": "PUMA Cali",
           "description": "Puma sneakers with a sleek and modern design. These shoes are suitable for various outdoor activities. Available in gray, green, and orange.",
-          "colors": ["Gray", "Green", "Orange"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Green",
+            "Orange"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 40,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (5).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (5).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -375,11 +679,23 @@
           "id": 24,
           "name": "PUMA Fenty",
           "description": "Puma high-top sneakers that combine style and functionality. These shoes offer excellent ankle support. Available in black, white, and yellow.",
-          "colors": ["Black", "White", "Yellow"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "White",
+            "Yellow"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 51,
           "price": 89.99,
-          "img": ["../backgrounds/products/Rectangle 6 (6).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (6).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -395,11 +711,23 @@
           "id": 25,
           "name": "Nano X3 Training Shoes",
           "description": "Reebok running shoes designed for comfort and durability. These shoes provide excellent cushioning for long-distance runners. Available in blue, yellow, and white.",
-          "colors": ["Blue", "Yellow", "White"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Blue",
+            "Yellow",
+            "White"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 55,
           "price": 94.99,
-          "img": ["../backgrounds/products/Rectangle 6 (1).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (1).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -408,11 +736,23 @@
           "id": 26,
           "name": "Club C Bulc Shoes",
           "description": "Reebok sneakers that offer a perfect blend of style and functionality. These shoes are suitable for various sports and activities. Available in gray, purple, and red.",
-          "colors": ["Gray", "Purple", "Red"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Gray",
+            "Purple",
+            "Red"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 47,
           "price": 79.99,
-          "img": ["../backgrounds/products/Rectangle 6 (2).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (2).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -421,11 +761,23 @@
           "id": 27,
           "name": "Nano X3 Froning Training Shoes",
           "description": "Reebok high-top sneakers with a modern and trendy design. These shoes are perfect for fashion-forward individuals. Available in black, green, and orange.",
-          "colors": ["Black", "Green", "Orange"],
-          "sizes": ["41", "40", "39", "42", "43"],
+          "colors": [
+            "Black",
+            "Green",
+            "Orange"
+          ],
+          "sizes": [
+            "41",
+            "40",
+            "39",
+            "42",
+            "43"
+          ],
           "quantity": 49,
           "price": 109.99,
-          "img": ["../backgrounds/products/Rectangle 6 (3).png"],
+          "img": [
+            "../backgrounds/products/Rectangle 6 (3).png"
+          ],
           "reviews": 6500,
           "sold": 120,
           "rate": 4.3
@@ -433,5 +785,11 @@
       ]
     }
   ],
-  "most-popular": [15, 1, 12, 4, 27]
+  "most-popular": [
+    15,
+    1,
+    12,
+    4,
+    27
+  ]
 }

@@ -66,9 +66,9 @@ export async function showProductsOfSelectedBrand(e) {
     console.log(id);
   } else if (
     e.target.parentNode.classList.contains("product") ||
+    e.target.parentNode.classList.contains("shoe-image") ||
     e.target.parentNode.classList.contains("shoe-image")
   ) {
-    console.log(e.target);
     redirectToProductDetailsPage(id);
   }
   //click on brands name on scroll bar that shows the selected brands products

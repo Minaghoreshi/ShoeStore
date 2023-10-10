@@ -1,10 +1,12 @@
 import { getProductsData } from "./get-data.js";
 import { brandsEndpoint, userEndpoint } from "./util.js";
+import { getDatabyEmail } from "./get-user.js";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let selectedSize;
 let selectedColor;
 let currntImageIndex = 0;
+let totalOrderPrice;
 let counter = 0;
 let shoeName = document.querySelector(".shoe-title");
 let sold = document.querySelector(".sold-value");
@@ -14,10 +16,47 @@ let sizeSection = document.querySelector(".size-section");
 let colorSection = document.querySelector(".color-section");
 let carouselImageContainer = document.querySelector(".img-container");
 let carouselBtn = document.querySelector(".carousel-button");
-let increaseButton = document.querySelector(".increase");
-let decreaseButton = document.querySelector(".decrease");
+
 let totalPrice = document.querySelector(".price");
 let quantity = document.querySelector(".quantity");
+class MyObject {
+  constructor(orderId, color, quantity, size, totalOrderPrice) {
+    this.orderId = orderId;
+    this.color = color;
+    this.quantity = quantity;
+    this.size = size;
+    this.totalPrice = totalOrderPrice;
+  }
+}
+async function updateUserOrders(updatedOrders) {
+  try {
+    let userData = await getDatabyEmail(`ghoreishi45@gmail.com`);
+    userData.orders = updatedOrders;
+    console.log(userData.id);
+    const putResponse = await fetch(
+      `http://localhost:3000/users/${userData.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      }
+    );
+
+    if (putResponse.ok) {
+      console.log("User orders updated successfully");
+    } else {
+      console.error("Failed to update user orders");
+    }
+  } catch (error) {
+    console.error("Error updating user orders:", error);
+  }
+}
+async function getu() {
+  let user = await getDatabyEmail(`ghoreishi45@gmail.com`);
+  return user.orders;
+}
 
 //back to home page
 document.querySelector(".back-botton").addEventListener("click", () => {
@@ -82,12 +121,12 @@ async function clickHandle(e) {
     if (counter > 0) {
       counter--;
       quantity.innerHTML = counter;
-      let total = (counter * price).toFixed(2);
-      totalPrice.innerHTML = `$ ${total}`;
+      totalOrderPrice = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${totalOrderPrice}`;
     } else if (counter == 0) {
       quantity.innerHTML = counter;
-      let total = (counter * price).toFixed(2);
-      totalPrice.innerHTML = `$ ${total}`;
+      totalOrderPrice = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${totalOrderPrice}`;
     }
   } else if (e.target.classList.contains("increase")) {
     let price = await getRawPrice();
@@ -96,9 +135,22 @@ async function clickHandle(e) {
     if (totalQuantity > counter) {
       counter++;
       quantity.innerHTML = counter;
-      let total = (counter * price).toFixed(2);
-      totalPrice.innerHTML = `$ ${total}`;
+      totalOrderPrice = (counter * price).toFixed(2);
+      totalPrice.innerHTML = `$ ${totalOrderPrice}`;
     }
+  } else if (e.target.classList.contains("add-to-cart")) {
+    console.log("cart clicked");
+    const newOrder = new MyObject(
+      id,
+      selectedColor,
+      counter,
+      selectedSize,
+      totalOrderPrice
+    );
+    let userOrders = await getu();
+    userOrders.push(newOrder);
+    console.log(userOrders);
+    updateUserOrders(userOrders);
   }
 }
 //resetting style of size and color circles
@@ -176,6 +228,7 @@ async function createCareousleImages(index) {
 
 document.addEventListener("DOMContentLoaded", () => {
   currntImageIndex = 0;
+
   fillProductDetails();
   createColorSection();
   createSizeSection();
