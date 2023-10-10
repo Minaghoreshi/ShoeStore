@@ -1,4 +1,5 @@
 import { getProductsData } from "./get-data.js";
+import { showToast } from "./toastify.js";
 import { brandsEndpoint, userEndpoint } from "./util.js";
 import { getDatabyEmail } from "./get-user.js";
 const urlParams = new URLSearchParams(window.location.search);
@@ -139,18 +140,25 @@ async function clickHandle(e) {
       totalPrice.innerHTML = `$ ${totalOrderPrice}`;
     }
   } else if (e.target.classList.contains("add-to-cart")) {
-    console.log("cart clicked");
-    const newOrder = new MyObject(
-      id,
-      selectedColor,
-      counter,
-      selectedSize,
-      totalOrderPrice
-    );
-    let userOrders = await getu();
-    userOrders.push(newOrder);
-    console.log(userOrders);
-    updateUserOrders(userOrders);
+    if (id && selectedColor && counter != 0 && selectedSize) {
+      showToast("added successfully", "green");
+      console.log("cart clicked");
+      const newOrder = new MyObject(
+        id,
+        selectedColor,
+        counter,
+        selectedSize,
+        totalOrderPrice
+      );
+      let userOrders = await getu();
+      userOrders.push(newOrder);
+      console.log(userOrders);
+      setTimeout(() => {
+        updateUserOrders(userOrders);
+      }, 3000);
+    } else {
+      showToast("complete your order", "red");
+    }
   }
 }
 //resetting style of size and color circles

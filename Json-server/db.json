@@ -8,34 +8,11 @@
       "user-name": "Mina",
       "orders": [
         {
-          "id": 1,
-          "color": "red",
-          "orderId": 7,
-          "quantity": 2,
-          "size": 40,
-          "totalPrice": 199.98
-        },
-        {
-          "id": 2,
-          "orderId": 6,
-          "color": "green",
-          "quantity": 1,
-          "size": 39,
-          "totalPrice": 199.98
-        },
-        {
-          "orderId": "1",
-          "color": "black",
+          "orderId": "12",
+          "color": "white",
           "quantity": 2,
           "size": "41",
-          "totalPrice": "199.98"
-        },
-        {
-          "orderId": "27",
-          "color": "green",
-          "quantity": 2,
-          "size": "40",
-          "totalPrice": "219.98"
+          "totalPrice": "159.98"
         }
       ]
     }

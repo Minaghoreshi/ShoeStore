@@ -60,6 +60,12 @@
   .select {
     @apply bg-black text-white;
   }
+  .order-image {
+    @apply bg-gray-100 rounded-3xl w-32 h-32;
+  }
+  .order-cart {
+    @apply rounded-3xl flex bg-white gap-5 w-96 p-5 items-center relative;
+  }
   @layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {
