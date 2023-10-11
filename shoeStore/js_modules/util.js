@@ -1,6 +1,7 @@
 export const brandsEndpoint = `http://localhost:3000/brands`;
-export const popularEndpoint = `  http://localhost:3000/most-popular`;
-export const userEndpoint = `  http://localhost:3000/users`;
+export const popularEndpoint = `http://localhost:3000/most-popular`;
+export const userEndpoint = `http://localhost:3000/users`;
+export const shippingEdPoint = `http://localhost:3000/shipping`;
 
 export const screenData = [
   {

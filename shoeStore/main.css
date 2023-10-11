@@ -66,6 +66,9 @@
   .order-cart {
     @apply rounded-3xl flex bg-white gap-5 w-96 p-5 items-center relative;
   }
+  .address-cart {
+    @apply rounded-3xl flex bg-white gap-5 w-96 p-5 items-center relative;
+  }
   @layer utilities {
     @variants responsive {
       .no-scrollbar::-webkit-scrollbar {

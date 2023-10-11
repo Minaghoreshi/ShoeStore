@@ -12,7 +12,28 @@
           "color": "red",
           "quantity": 10,
           "size": "42",
-          "totalPrice": "999.90"
+          "totalPrice": "999.90",
+          "stats": "active"
+        }
+      ],
+      "address": [
+        {
+          "addressId": 1,
+          "addressTitle": "Home",
+          "details": "sdfsd sdfasdf dsfsdf",
+          "default": "off"
+        },
+        {
+          "addressId": 2,
+          "addressTitle": "Office",
+          "details": "sdfsd dfhsdghsdghhgsgh",
+          "default": "on"
+        },
+        {
+          "addressId": 3,
+          "addressTitle": "Office2",
+          "details": "sdfsd sdhgsdghsdghsgd",
+          "default": "off"
         }
       ]
     }
@@ -768,5 +789,31 @@
     12,
     4,
     27
+  ],
+  "shipping": [
+    {
+      "id": 1,
+      "name": "Economy",
+      "price": 15,
+      "selected": "yes"
+    },
+    {
+      "id": 2,
+      "name": "Express",
+      "price": 20,
+      "selected": "no"
+    },
+    {
+      "id": 3,
+      "name": "Regular",
+      "price": 25,
+      "selected": "no"
+    },
+    {
+      "id": 4,
+      "name": "Cargo",
+      "price": 30,
+      "selected": "no"
+    }
   ]
 }

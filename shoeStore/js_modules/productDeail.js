@@ -23,12 +23,13 @@ let carouselBtn = document.querySelector(".carousel-button");
 let totalPrice = document.querySelector(".price");
 let quantity = document.querySelector(".quantity");
 class MyObject {
-  constructor(orderId, color, quantity, size, totalOrderPrice) {
+  constructor(orderId, color, quantity, size, totalOrderPrice, stats) {
     this.orderId = orderId;
     this.color = color;
     this.quantity = quantity;
     this.size = size;
     this.totalPrice = totalOrderPrice;
+    this.stats = "active";
   }
 }
 
@@ -126,7 +127,8 @@ async function clickHandle(e) {
         selectedColor,
         counter,
         selectedSize,
-        totalOrderPrice
+        totalOrderPrice,
+        stats
       );
       let userOrders = await getu();
       userOrders.push(newOrder);

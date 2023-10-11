@@ -4,7 +4,7 @@ import { createOrderCart } from "./createOrderCart.js";
 import { getAllOrders } from "./getAllOrders.js";
 import { updateUserOrders } from "./updateUserOrder.js";
 let cartTotalPrice = document.querySelector(".price");
-function fillTotalPrice(value) {
+export function fillTotalPrice(value) {
   cartTotalPrice.innerHTML = `$ ${value}`;
 }
 let modal = document.querySelector(".modal");
@@ -18,8 +18,8 @@ async function fillPage() {
     allModels.push(...brand.models);
   });
   let allOrders = await getAllOrders();
-
-  let allPrice = allOrders.map((order) => parseFloat(order.totalPrice));
+  const activeOrders = allOrders.filter((order) => order.stats === "active");
+  let allPrice = activeOrders.map((order) => parseFloat(order.totalPrice));
 
   let totalPrice = allPrice
     .reduce((ac, cv) => {
@@ -28,7 +28,7 @@ async function fillPage() {
     .toFixed(2);
 
   fillTotalPrice(totalPrice);
-  allOrders.forEach((order, index) => {
+  activeOrders.forEach((order, index) => {
     let originalOrderInfo = allModels.filter(
       (model) => model.id == parseInt(order.orderId)
     );

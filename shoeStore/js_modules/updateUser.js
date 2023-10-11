@@ -27,3 +27,30 @@ export async function updateUserOrders(updatedOrders) {
     console.error("Error updating user orders:", error);
   }
 }
+export async function updateUserAddress(updatedUserArr) {
+  try {
+    const userData = await getDatabyEmail("ghoreishi45@gmail.com");
+    console.log(userData);
+    // Update the userData.orders with non-zero orders
+    userData.address = updatedUserArr;
+
+    const putResponse = await fetch(
+      `http://localhost:3000/users/${userData.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      }
+    );
+
+    if (putResponse.ok) {
+      console.log("User orders updated successfully");
+    } else {
+      console.error("Failed to update user orders");
+    }
+  } catch (error) {
+    console.error("Error updating user orders:", error);
+  }
+}
