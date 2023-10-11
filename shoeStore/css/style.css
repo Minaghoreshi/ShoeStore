@@ -1697,6 +1697,18 @@ footer span {
   width: 11rem;
 }
 
+.max-w-\[147px\] {
+  max-width: 147px;
+}
+
+.max-w-\[150px\] {
+  max-width: 150px;
+}
+
+.max-w-\[155px\] {
+  max-width: 155px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2860,6 +2872,11 @@ footer span {
 .border-gray-50 {
   --tw-border-opacity: 1;
   border-color: rgb(249 250 251 / var(--tw-border-opacity));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {

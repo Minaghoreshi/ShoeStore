@@ -2,6 +2,8 @@ import { getProductsData } from "./get-data.js";
 import { showToast } from "./toastify.js";
 import { brandsEndpoint, userEndpoint } from "./util.js";
 import { getDatabyEmail } from "./get-user.js";
+import { updateUserOrders } from "./updateUserOrder.js";
+import { updateUserOrders } from "./updateUserOrder.js";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let selectedSize;
@@ -29,31 +31,7 @@ class MyObject {
     this.totalPrice = totalOrderPrice;
   }
 }
-async function updateUserOrders(updatedOrders) {
-  try {
-    let userData = await getDatabyEmail(`ghoreishi45@gmail.com`);
-    userData.orders = updatedOrders;
-    console.log(userData.id);
-    const putResponse = await fetch(
-      `http://localhost:3000/users/${userData.id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      }
-    );
 
-    if (putResponse.ok) {
-      console.log("User orders updated successfully");
-    } else {
-      console.error("Failed to update user orders");
-    }
-  } catch (error) {
-    console.error("Error updating user orders:", error);
-  }
-}
 async function getu() {
   let user = await getDatabyEmail(`ghoreishi45@gmail.com`);
   return user.orders;
