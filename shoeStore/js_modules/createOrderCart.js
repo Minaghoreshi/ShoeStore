@@ -15,7 +15,7 @@ export function createOrderCart(order, originOfOrder, orderIndex) {
   </div>
   <span class="price-${orderIndex} mt-4 text-base font-semibold">${order.totalPrice} $</span>
 </div>
-<div class="absolute top-5 right-4">
+<div class="trash absolute top-5 right-4" id="index-${orderIndex}">
   <iconify-icon
     icon="iconoir:trash"
     width="30"

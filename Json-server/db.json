@@ -10,13 +10,6 @@
         {
           "orderId": "1",
           "color": "red",
-          "quantity": 4,
-          "size": "42",
-          "totalPrice": "399.96"
-        },
-        {
-          "orderId": "1",
-          "color": "red",
           "quantity": 10,
           "size": "42",
           "totalPrice": "999.90"
