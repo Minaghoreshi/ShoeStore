@@ -33,7 +33,7 @@ async function fillPage() {
     let originalOrderInfo = allModels.filter(
       (model) => model.id == parseInt(order.orderId)
     );
-
+    console.log(order);
     createOrderCart(order, ...originalOrderInfo, index);
   });
 }
@@ -83,6 +83,11 @@ async function changeQuantity(
   allOrders.splice(selectedIndex, 0, selectedOrder);
   let quantitytext = document.querySelector(`.quantity-${selectedIndex}`);
   quantitytext.textContent = quantity;
+  if (quantity == 0) {
+    setTimeout(() => {
+      location.reload();
+    }, 1500);
+  }
   updateUserOrders(allOrders);
 }
 let allOrders = [];
@@ -116,6 +121,8 @@ async function clickHandle(e) {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     let selectedIndex = e.target.parentNode.id.split("-")[1];
+    console.log(selectedIndex);
+    console.log(allOrders);
     let selectedOrder = allOrders[selectedIndex];
     const brands = await getProductsData(brandsEndpoint);
     let allModels = [];
@@ -125,6 +132,7 @@ async function clickHandle(e) {
     const matchingModel = allModels.find(
       (model) => model.id === parseInt(selectedOrder.orderId)
     );
+    console.log(matchingModel);
     modal.innerHTML = "";
     modal.innerHTML = ` <span class="text-xl font-semibold">Remove from Cart?</span>
     <div class="h-[2px] w-full my-5 bg-gray-100"></div> <div class="order-cart modal-order-cart">  <div class="bg-gray-100 rounded-3xl w-32 h-128">
@@ -171,8 +179,11 @@ async function clickHandle(e) {
     let selectedOrder = allOrders[selectedIndex];
     console.log(selectedOrder.quantity);
     selectedOrder.quantity = 0;
-
+    console.log(selectedOrder);
     updateUserOrders(allOrders);
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
   } else if (
     e.target.parentNode.classList.contains("checkout") ||
     e.target.classList.contains("checkout")

@@ -1,11 +1,11 @@
 import { getDatabyEmail } from "./get-user.js";
 export async function updateUserOrders(updatedOrders) {
   try {
-    const nonZeroOrders = updatedOrders.filter((order) => order.quantity !== 0);
+    const nonZeroOrders = updatedOrders.filter((order) => order.quantity != 0);
     const userData = await getDatabyEmail("ghoreishi45@gmail.com");
-    console.log(userData);
     // Update the userData.orders with non-zero orders
     userData.orders = nonZeroOrders;
+    console.log(userData);
 
     const putResponse = await fetch(
       `http://localhost:3000/users/${userData.id}`,

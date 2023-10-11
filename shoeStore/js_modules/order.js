@@ -44,7 +44,6 @@ async function fillPage() {
 
   const activeOrders = allOrders.filter((order) => order.stats === "active");
   let allPrice = activeOrders.map((order) => parseFloat(order.totalPrice));
-  console.log(activeOrders);
   let totalPrice = allPrice
     .reduce((ac, cv) => {
       return ac + cv;
