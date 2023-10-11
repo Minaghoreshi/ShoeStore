@@ -183,3 +183,6 @@ async function clickHandle(e) {
 
 document.addEventListener("DOMContentLoaded", fillPage);
 document.addEventListener("click", clickHandle);
+document.querySelector(".orders").addEventListener("click", () => {
+  window.location.href = "http://127.0.0.1:5500/html/orders.html";
+});

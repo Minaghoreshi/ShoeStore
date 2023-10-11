@@ -12,7 +12,7 @@ import {
 } from "./dom.js";
 export function loginBackBtn() {
   console.log("clicked");
-  window.location.href = `http://127.0.0.1:5500/shoeStore/html/index.html`;
+  window.location.href = `http://127.0.0.1:5500/html/index.html`;
 }
 
 export async function checkInput() {
@@ -68,14 +68,14 @@ export async function signinBtnClicked(e) {
     } else if (formData.password === user.password) {
       console.log("correct");
       passwordAlert.classList.add("hidden");
-      window.location.href = "http://127.0.0.1:5500/shoeStore/html/home.html";
+      window.location.href = "http://127.0.0.1:5500/html/home.html";
     }
     console.log(user);
   }
 }
 function addBaseUrl() {
   const currentUrl = window.location.href;
-  const desiredBaseUrl = "http://127.0.0.1:5500/shoeStore/html/login.html";
+  const desiredBaseUrl = "http://127.0.0.1:5500/html/login.html";
 
   if (currentUrl !== desiredBaseUrl) {
     window.history.replaceState({}, "", desiredBaseUrl);

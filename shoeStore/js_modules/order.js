@@ -8,6 +8,7 @@ async function fillPage() {
   const brands = await getProductsData(brandsEndpoint);
   active.classList.remove("border-gray-300");
   active.classList.add("border-black");
+  complete.classList.remove("border-black");
   let allModels = [];
   brands.forEach((brand) => {
     allModels.push(...brand.models);
@@ -33,7 +34,8 @@ async function fillPage() {
 }
 async function fillCompletePage() {
   const brands = await getProductsData(brandsEndpoint);
-  active.classList.remove("border-gray-300");
+  complete.classList.remove("border-gray-300");
+  complete.classList.add("border-black");
   active.classList.remove("border-black");
   let allModels = [];
   brands.forEach((brand) => {
@@ -63,4 +65,10 @@ async function fillCompletePage() {
 document.querySelector(".complete").addEventListener("click", fillCompletePage);
 document.querySelector(".active").addEventListener("click", fillPage);
 
+document.querySelector(".home-botton").addEventListener("click", () => {
+  window.location.href = `http://127.0.0.1:5500/html/home.html`;
+});
+document.querySelector(".cart").addEventListener("click", () => {
+  window.location.href = `http://127.0.0.1:5500/html/cart.html`;
+});
 document.addEventListener("DOMContentLoaded", fillPage);
