@@ -13,7 +13,7 @@ export function createOrderCart(order, originOfOrder, orderIndex) {
     <div class="bg-gray-400 w-[2px] h-4"></div>
     <span class="text-xs">Size = ${order.size}</span>
   </div>
-  <span class="price-${orderIndex} mt-4 text-xl font-semibold">${order.totalPrice} $</span>
+  <span class="price-${orderIndex} mt-4 text-base font-semibold">${order.totalPrice} $</span>
 </div>
 <div class="absolute top-5 right-4">
   <iconify-icon

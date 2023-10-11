@@ -8,46 +8,18 @@
       "user-name": "Mina",
       "orders": [
         {
-          "orderId": "12",
-          "color": "white",
-          "quantity": 2,
-          "size": "41",
-          "totalPrice": "159.98"
-        },
-        {
-          "orderId": "12",
-          "color": "white",
-          "quantity": 2,
-          "size": "41",
-          "totalPrice": "159.98"
-        },
-        {
-          "orderId": "11",
-          "color": "green",
-          "quantity": 2,
-          "size": "41",
-          "totalPrice": "139.98"
-        },
-        {
-          "orderId": "11",
-          "color": "blue",
-          "quantity": 1,
-          "size": "41",
-          "totalPrice": "69.99"
+          "orderId": "1",
+          "color": "red",
+          "quantity": 4,
+          "size": "42",
+          "totalPrice": "399.96"
         },
         {
           "orderId": "1",
           "color": "red",
-          "quantity": 3,
-          "size": "39",
-          "totalPrice": "299.97"
-        },
-        {
-          "orderId": "3",
-          "color": "yellow",
-          "quantity": 3,
-          "size": "40",
-          "totalPrice": "359.97"
+          "quantity": 10,
+          "size": "42",
+          "totalPrice": "999.90"
         }
       ]
     }

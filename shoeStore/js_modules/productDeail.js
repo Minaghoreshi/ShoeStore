@@ -3,7 +3,7 @@ import { showToast } from "./toastify.js";
 import { brandsEndpoint, userEndpoint } from "./util.js";
 import { getDatabyEmail } from "./get-user.js";
 import { updateUserOrders } from "./updateUserOrder.js";
-import { updateUserOrders } from "./updateUserOrder.js";
+
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let selectedSize;
