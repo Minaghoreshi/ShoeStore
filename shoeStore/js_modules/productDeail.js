@@ -6,6 +6,7 @@ import { getDatabyEmail } from "./get-user.js";
 import { updateUserOrders } from "./updateUser.js";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+let stats = "active";
 let selectedSize;
 let selectedColor;
 let currntImageIndex = 0;
@@ -29,7 +30,7 @@ class MyObject {
     this.quantity = quantity;
     this.size = size;
     this.totalPrice = totalOrderPrice;
-    this.stats = "active";
+    this.stats = stats;
   }
 }
 

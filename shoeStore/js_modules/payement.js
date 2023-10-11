@@ -13,12 +13,12 @@ async function openModal() {
     allModels.push(...brand.models);
   });
   let allOrders = await getAllOrders();
-  const activeOrders = allOrders.filter((order) => order.stats === "active");
-  activeOrders.forEach((order) => {
+
+  allOrders.forEach((order) => {
     order.stats = "completed";
   });
-  console.log(activeOrders);
-  updateUserOrders(activeOrders);
+  // console.log(activeOrders);
+  updateUserOrders(allOrders);
 }
 document.addEventListener("click", clickHandle);
 function clickHandle(e) {

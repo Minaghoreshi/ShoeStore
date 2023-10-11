@@ -1466,6 +1466,18 @@ footer span {
   margin-top: 24rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-11 {
+  margin-top: 2.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1731,6 +1743,15 @@ footer span {
 
 .w-full {
   width: 100%;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-\[90px\] {
+  width: 90px;
 }
 
 .max-w-\[155px\] {
@@ -3958,6 +3979,13 @@ footer span {
 .hover\:before\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
+}
+
+.focus\:line-clamp-none:focus {
+  overflow: visible;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: none;
 }
 
 .focus\:outline-none:focus {
