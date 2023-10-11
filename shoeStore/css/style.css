@@ -1406,6 +1406,11 @@ footer span {
   margin-bottom: 1.25rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1633,6 +1638,10 @@ footer span {
   height: 6rem;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1695,6 +1704,22 @@ footer span {
 
 .w-44 {
   width: 11rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .max-w-\[147px\] {
@@ -3120,6 +3145,10 @@ footer span {
   padding: 1.5rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -3243,6 +3272,10 @@ footer span {
 
 .pb-\[200px\] {
   padding-bottom: 200px;
+}
+
+.pb-\[95px\] {
+  padding-bottom: 95px;
 }
 
 .text-left {
