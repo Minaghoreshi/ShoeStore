@@ -83,7 +83,7 @@ export async function showProductsOfSelectedBrand(e) {
 }
 export function redirectToProductDetailsPage(id) {
   console.log("show product Detail Page");
-  window.location.href = `http://127.0.0.1:5500/shoeStore/html/productDetail.html?id=${id}`;
+  window.location.href = `http://127.0.0.1:5500/html/productDetail.html?id=${id}`;
 }
 async function showSelectedBrandOfScrllBar(id) {
   mostPopular.classList.remove("text-red-600");
@@ -96,5 +96,5 @@ async function showSelectedBrandOfScrllBar(id) {
   createProductCard(result);
 }
 async function redirectToBrandPage(id) {
-  window.location.href = `http://127.0.0.1:5500/shoeStore/html/brand.html?brand=${id}`;
+  window.location.href = `http://127.0.0.1:5500/html/brand.html?brand=${id}`;
 }

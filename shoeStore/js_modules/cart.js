@@ -2,7 +2,8 @@ import { brandsEndpoint } from "./util.js";
 import { getProductsData } from "./get-data.js";
 import { createOrderCart } from "./createOrderCart.js";
 import { getAllOrders } from "./getAllOrders.js";
-import { updateUserOrders } from "./updateUserOrder.js";
+import { updateUserAddress } from "./updateUser.js";
+import { updateUserOrders } from "./updateUser.js";
 let cartTotalPrice = document.querySelector(".price");
 export function fillTotalPrice(value) {
   cartTotalPrice.innerHTML = `$ ${value}`;
@@ -110,7 +111,7 @@ async function clickHandle(e) {
     }
     updateUserOrders(allOrders);
   } else if (e.target.parentNode.classList.contains("home-botton")) {
-    window.location.href = `http://127.0.0.1:5500/shoeStore/html/home.html`;
+    window.location.href = `http://127.0.0.1:5500/html/home.html`;
   } else if (e.target.parentNode.classList.contains("trash")) {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
@@ -176,7 +177,7 @@ async function clickHandle(e) {
     e.target.parentNode.classList.contains("checkout") ||
     e.target.classList.contains("checkout")
   ) {
-    window.location.href = `http://127.0.0.1:5500/shoeStore/html/checkout.html`;
+    window.location.href = `http://127.0.0.1:5500/html/checkout.html`;
   }
 }
 

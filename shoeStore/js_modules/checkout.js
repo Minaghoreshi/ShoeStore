@@ -137,11 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function clickHandle(e) {
   console.log(e.target);
   if (e.target.classList.contains("back-botton")) {
-    window.location.href = `http://127.0.0.1:5500/shoeStore/html/home.html`;
+    window.location.href = `http://127.0.0.1:5500/html/home.html`;
   } else if (e.target.classList.contains("address-list")) {
-    window.location.href = `http://127.0.0.1:5500/shoeStore/html/address.html`;
+    window.location.href = `http://127.0.0.1:5500/html/address.html`;
   } else if (e.target.parentNode.classList.contains("shipping")) {
-    window.location.href = `http://127.0.0.1:5500/shoeStore/html/shippingType.html`;
+    window.location.href = `http://127.0.0.1:5500/html/shippingType.html`;
+  } else if (e.target.classList.contains("countinue")) {
+    console.log("d");
+    window.location.href = `http://127.0.0.1:5500/html/payement.html`;
   }
 }
 

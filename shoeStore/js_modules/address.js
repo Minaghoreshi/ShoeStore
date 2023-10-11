@@ -4,7 +4,7 @@ import { showToast } from "./toastify.js";
 let addressWrapper = document.querySelector(".adress-wrapper");
 let addBtn = document.querySelector(".add");
 let selectedAddressName;
-async function CreateDefaultAddress() {
+async function createAdressCarts() {
   let user = await getDatabyEmail("ghoreishi45@gmail.com");
   let userAddresses = [...user.address];
   console.log(userAddresses);
@@ -40,8 +40,7 @@ async function clickHandle(e) {
   if (e.target.classList.contains("radio")) {
     selectedAddressName = e.target.id;
     console.log(selectedAddressName);
-  }
-  if (e.target.classList.contains("add")) {
+  } else if (e.target.classList.contains("add")) {
     let user = await getDatabyEmail("ghoreishi45@gmail.com");
     let userAddresses = [...user.address];
     console.log(userAddresses);
@@ -53,23 +52,22 @@ async function clickHandle(e) {
       for (let i = 0; i < userAddresses.length; i++) {
         if (userAddresses[i].addressTitle === selectedAddressName) {
           userAddresses[i].default = "on";
-          console.log(
-            `Changed default to "on" for address with title ${selectedAddressName}`
-          );
           break; // Exit the loop once the address is found and updated
         }
       }
       console.log(userAddresses);
       updateUserAddress(userAddresses);
-      // setTimeout(() => {
-      //   window.location.href =
-      //     "http://127.0.0.1:5500/shoeStore/html/checkout.html";
-      // }, 3000);
+      setTimeout(() => {
+        window.location.href = "http://127.0.0.1:5500/html/checkout.html";
+      }, 1000);
     } else if (!selectedAddressName) {
       showToast("select Address", "red");
     }
   }
+  if (e.target.classList.contains("back-botton")) {
+    window.location.href = `http://127.0.0.1:5500/html/checkout.html`;
+  }
 }
 
 document.addEventListener("click", clickHandle);
-document.addEventListener("DOMContentLoaded", CreateDefaultAddress);
+document.addEventListener("DOMContentLoaded", createAdressCarts);

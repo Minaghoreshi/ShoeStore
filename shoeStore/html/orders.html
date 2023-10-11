@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer type="module" src="../js_modules/order.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </head>
+  <body class="h-screen bg-gray-50">
+    <div class="flex mt-10 flex-col px-6">
+      <div class="flex w-full justify-between">
+        <div class="flex gap-7 justify-center items-center text-xl font-bold">
+          <img class="w-8 h-8" src="../logo/blackLogo.png" alt="" /><span
+            >My Orders</span
+          >
+        </div>
+        <div><i class="fa-lg fa-solid fa-search text-gray-500"></i></div>
+      </div>
+      <div class="flex w-full justify-center">
+        <button class="active border-0 w-[40%] border-b-2 border-black">
+          Active
+        </button>
+        <button class="complete border-0 w-[40%] border-b-2 border-gray-300">
+          Completed
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="container pb-[200px] gap-8 bg-gray-50 flex flex-col items-center pt-6 px-6"
+    ></div>
+
+    <footer
+      class="w-full h-[66px] px-12 flex gap-11 py-3 fixed bottom-0 bg-white"
+    >
+      <div class="home-botton flex-col-center">
+        <iconify-icon
+          icon="octicon:home-24"
+          width="24"
+          height="24"
+        ></iconify-icon>
+        <span>Home</span>
+      </div>
+      <div class="cart flex-col-center">
+        <iconify-icon
+          icon="ion:bag-outline"
+          width="24"
+          height="24"
+        ></iconify-icon>
+        <span>Cards</span>
+      </div>
+      <div class="orders flex-col-center">
+        <iconify-icon icon="bi:cart" width="24" height="24"></iconify-icon>
+        <span>Orders</span>
+      </div>
+      <div class="flex-col-center">
+        <iconify-icon icon="cil:wallet" width="24" height="24"></iconify-icon
+        ><span>Wallet</span>
+      </div>
+      <div class="flex-col-center">
+        <iconify-icon
+          icon="fa6-regular:user"
+          width="24"
+          height="24"
+        ></iconify-icon>
+        <span>Profile</span>
+      </div>
+    </footer>
+  </body>
+</html>

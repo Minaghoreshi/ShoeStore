@@ -2,8 +2,8 @@ import { getProductsData } from "./get-data.js";
 import { showToast } from "./toastify.js";
 import { brandsEndpoint, userEndpoint } from "./util.js";
 import { getDatabyEmail } from "./get-user.js";
-import { updateUserOrders } from "./updateUserOrder.js";
-
+// import { updateUserOrders } from "./updateUserOrder.js";
+import { updateUserOrders } from "./updateUser.js";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 let selectedSize;
@@ -40,7 +40,7 @@ async function getu() {
 
 //back to home page
 document.querySelector(".back-botton").addEventListener("click", () => {
-  window.location.href = `http://127.0.0.1:5500/shoeStore/html/home.html`;
+  window.location.href = `http://127.0.0.1:5500/html/home.html`;
 });
 //get the data of product from id in urlparams
 async function getproductById(id) {

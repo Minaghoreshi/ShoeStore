@@ -18,5 +18,5 @@ async function createBrandPage() {
 }
 document.addEventListener("DOMContentLoaded", createBrandPage);
 document.querySelector(".back-botton").addEventListener("click", () => {
-  window.location.href = `http://127.0.0.1:5500/shoeStore/html/home.html`;
+  window.location.href = `http://127.0.0.1:5500/html/home.html`;
 });
