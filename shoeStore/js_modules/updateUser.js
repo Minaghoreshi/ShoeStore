@@ -1,4 +1,53 @@
 import { getDatabyEmail } from "./get-user.js";
+export async function updateUserPassword(val) {
+  try {
+    let userData = await getDatabyEmail(`ghoreishi45@gmail.com`);
+    if (val) {
+      console.log(userData);
+      userData.remember = val;
+      console.log(val);
+      console.log(userData.remember);
+      const putResponse = await fetch(
+        `http://localhost:3000/users/${userData.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+
+      if (putResponse.ok) {
+        console.log("User orders updated successfully");
+      } else {
+        console.error("Failed to update user orders");
+      }
+    } else {
+      console.log("u");
+      userData.remember = "";
+
+      const putResponse = await fetch(
+        `http://localhost:3000/users/${userData.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+
+      if (putResponse.ok) {
+        console.log("User orders updated successfully");
+      } else {
+        console.error("Failed to update user orders");
+      }
+    }
+  } catch (error) {
+    console.error("Error updating user pass:", error);
+  }
+}
 export async function updateUserOrders(updatedOrders) {
   try {
     const nonZeroOrders = updatedOrders.filter((order) => order.quantity != 0);

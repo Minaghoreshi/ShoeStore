@@ -1,5 +1,6 @@
 import { updateScreen } from "./changePage.js";
 import { screenData } from "./util.js";
+import { updateUserPassword } from "./updateUser.js";
 import { getDatabyEmail } from "./get-user.js";
 import {
   backBtn,
@@ -63,6 +64,12 @@ export async function signinBtnClicked(e) {
     const form = document.querySelector(".sign-in-form");
     const formData = Object.fromEntries(new FormData(form).entries());
     let user = await getDatabyEmail(formData.email);
+    if (formData.Remember) {
+      console.log("form");
+      updateUserPassword(formData.Remember);
+    } else if (!formData.Remember) {
+      updateUserPassword(formData.Remember);
+    }
     if (formData.password != user.password) {
       passwordAlert.classList.remove("hidden");
     } else if (formData.password === user.password) {
