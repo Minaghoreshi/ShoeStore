@@ -183,7 +183,7 @@ async function clickHandle(e) {
     updateUserOrders(allOrders);
     setTimeout(() => {
       location.reload();
-    }, 3000);
+    }, 1000);
   } else if (
     e.target.parentNode.classList.contains("checkout") ||
     e.target.classList.contains("checkout")

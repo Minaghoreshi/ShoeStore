@@ -1357,6 +1357,14 @@ footer span {
   top: 1.25rem;
 }
 
+.left-9 {
+  left: 2.25rem;
+}
+
+.top-\[100px\] {
+  top: 100px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1721,6 +1729,10 @@ footer span {
   width: 2px;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-\[328px\] {
   width: 328px;
 }
@@ -1739,6 +1751,14 @@ footer span {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[320px\] {
+  width: 320px;
 }
 
 .max-w-\[155px\] {
