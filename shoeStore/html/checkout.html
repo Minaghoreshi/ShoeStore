@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer type="module" src="../js_modules/checkout.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="container pb-[95px] bg-gray-50 flex gap-5 flex-col items-center pt-6 px-6"
+    >
+      <div class="h-14 items-center flex w-full justify-between">
+        <div class="flex gap-3 items-center">
+          <i class="back-botton fa-solid fa-arrow-left"></i>
+          <span class="text-xl font-bold">Checkout</span>
+        </div>
+        <iconify-icon
+          icon="system-uicons:circle-menu"
+          style="color: black"
+          width="30"
+          height="30"
+        ></iconify-icon>
+      </div>
+      <div class="flex justify-items-start w-full">
+        <span class="font-bold text-lg">Shipping Address</span>
+      </div>
+      <div class="adress-wrapper flex flex-col gap-5">
+        <!-- <div class="address-cart">
+          <div
+            class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full"
+          >
+            <iconify-icon
+              icon="fluent:location-12-filled"
+              width="30"
+              height="30"
+            ></iconify-icon>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold line-clamp-1">Home</span>
+
+            <span class="price-0 text-base max-w-[155px]">999.90 $</span>
+          </div>
+          <iconify-icon
+            class="absolute bottom-5 right-4 rounded-full flex items-center justify-center"
+            icon="ri:edit-2-fill"
+            width="30"
+            height="30"
+          ></iconify-icon>
+        </div> -->
+      </div>
+      <div class="h-[2px] w-full bg-gray-100"></div>
+      <div class="flex justify-items-start w-full">
+        <span class="font-bold text-lg">Order List</span>
+      </div>
+      <div class="order-wrapper flex flex-col gap-5">
+        <!-- <div class="order-cart">
+          <div class="order-image">
+            <img src="../backgrounds/products/Rectangle 6 (1).png" alt="" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <span class="max-w-[155px] font-semibold line-clamp-1"
+              >Air Jordan 1 Low SE</span
+            >
+            <div class="flex gap-1 items-center">
+              <div
+                class="rounded-full w-5 h-5 border border-gray-500 bg-red-400"
+              ></div>
+              <span class="text-xs">red</span>
+              <div class="bg-gray-400 w-[2px] h-4"></div>
+              <span class="text-xs">Size = 42</span>
+            </div>
+            <span class="price-0 mt-4 text-base font-semibold">999.90 $</span>
+          </div>
+
+          <span
+            class="bg-gray-100 w-11 h-11 absolute bottom-5 right-4 rounded-full flex items-center justify-center gap-5"
+          >
+            10
+          </span>
+        </div>
+        <div class="order-cart">
+          <div class="order-image">
+            <img src="../backgrounds/products/Rectangle 6 (1).png" alt="" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <span class="max-w-[155px] font-semibold line-clamp-1"
+              >Air Jordan 1 Low SE</span
+            >
+            <div class="flex gap-1 items-center">
+              <div
+                class="rounded-full w-5 h-5 border border-gray-500 bg-red-400"
+              ></div>
+              <span class="text-xs">red</span>
+              <div class="bg-gray-400 w-[2px] h-4"></div>
+              <span class="text-xs">Size = 42</span>
+            </div>
+            <span class="price-0 mt-4 text-base font-semibold">999.90 $</span>
+          </div>
+
+          <span
+            class="bg-gray-100 w-11 h-11 absolute bottom-5 right-4 rounded-full flex items-center justify-center gap-5"
+          >
+            10
+          </span>
+        </div> -->
+      </div>
+      <div class="h-[2px] w-full bg-gray-100"></div>
+      <div class="flex justify-items-start w-full">
+        <span class="font-bold text-lg">Choose Shipping</span>
+      </div>
+      <div
+        class="shipping rounded-3xl flex bg-white gap-5 w-96 p-5 items-center justify-between"
+      >
+        <div class="shipping">
+          <iconify-icon icon="mdi:truck" width="30" height="30"></iconify-icon>
+        </div>
+        <span>Choosing Shipping Address</span>
+        <iconify-icon
+          icon="ep:arrow-right-bold"
+          width="30"
+          height="30"
+        ></iconify-icon>
+      </div>
+      <div class="h-[2px] w-full bg-gray-100"></div>
+      <div class="flex justify-items-start w-full">
+        <span class="font-bold text-lg">Promo Code</span>
+      </div>
+      <div class="flex justify-between w-full text-[#BAB8BC]">
+        <input
+          class="bg-gray-100 w-[80%] rounded-xl outline-none border-none focus:ring-0"
+          type="search"
+          placeholder="Enter Promo Code"
+        />
+        <div
+          class="w-14 text-3xl h-14 bg-black text-white rounded-full flex items-center justify-center"
+        >
+          +
+        </div>
+      </div>
+      <div
+        class="rounded-3xl flex flex-col bg-white gap-5 w-96 p-5 items-center justify-between"
+      >
+        <div class="flex w-full justify-between">
+          <span>Amount</span><span class="amount"></span>
+        </div>
+        <div class="flex w-full justify-between">
+          <span>Shipping</span><span class="shiping">-$</span>
+        </div>
+        <div class="h-[2px] w-full bg-gray-100"></div>
+        <div class="flex w-full justify-between">
+          <span>Total</span><span class="total">-$</span>
+        </div>
+      </div>
+      <div
+        class="z-10 py-5 px-5 items-center bg-white flex justify-center fixed w-full bottom-0 rounded-t-[50px] border-t-2 border-gray-50"
+      >
+        <button
+          class="countinue w-full text-white font-semibold bg-black justify-center rounded-full py-3 flex gap-3"
+        >
+          Countinue to Payement
+          <iconify-icon
+            icon="ph:arrow-right-fill"
+            style="color: white"
+            width="30"
+            height="30"
+          ></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

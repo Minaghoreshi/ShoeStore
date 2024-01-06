@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer type="module" src="../js_modules/cart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </head>
+  <body class="h-screen bg-gray-50">
+    <div
+      class="container pb-[200px] gap-8 bg-gray-50 flex flex-col items-center pt-6 px-6"
+    >
+      <div class="flex w-full justify-between">
+        <div class="flex gap-7 justify-center items-center text-xl font-bold">
+          <img class="w-8 h-8" src="../logo/blackLogo.png" alt="" /><span
+            >My Cart</span
+          >
+        </div>
+        <div><i class="fa-lg fa-solid fa-search text-gray-500"></i></div>
+      </div>
+    </div>
+    <div
+      class="flex justify-between p-6 fixed w-full bg-white bottom-[66px] rounded-t-[50px] border-t-2 border-gray-50"
+    >
+      <div class="flex flex-col">
+        <span class="text-xs text-gray-400">Total Price</span>
+        <span class="price text-xl font-semibold">$ 0</span>
+      </div>
+      <button
+        class="checkout text-white bg-black px-16 rounded-full py-3 flex items-center gap-3"
+      >
+        Checkout
+        <iconify-icon
+          icon="ph:arrow-right-fill"
+          style="color: white"
+          width="30"
+          height="30"
+        ></iconify-icon>
+      </button>
+    </div>
+    <div
+      class="modal hidden z-10 py-5 items-center bg-gray-50 flex flex-col gap-2 justify-between fixed w-full bottom-[66px] rounded-t-[50px] border-t-2 border-gray-50"
+    >
+      <span class="text-xl font-semibold">Remove from Cart?</span>
+      <div class="h-[2px] w-full my-5 bg-gray-100"></div>
+
+      <div class="order-cart modal-order-cart"></div>
+      <div class="flex gap-3">
+        <button
+          class="cancel w-44 text-black font-semibold bg-gray-200 justify-center rounded-full py-3 flex gap-3"
+        >
+          cancel
+        </button>
+        <button
+          class="remove w-44 text-white font-semibold bg-black rounded-full py-3 flex justify-center gap-3"
+        >
+          Yes, remove
+        </button>
+      </div>
+    </div>
+    <div
+      class="overlay fixed top-0 bg-[#000000b3] w-full h-full z-0 hidden"
+    ></div>
+    <footer
+      class="w-full h-[66px] px-12 flex gap-11 py-3 fixed bottom-0 bg-white"
+    >
+      <div class="home-botton flex-col-center">
+        <iconify-icon
+          icon="octicon:home-24"
+          width="24"
+          height="24"
+        ></iconify-icon>
+        <span>Home</span>
+      </div>
+      <div class="cart flex-col-center">
+        <iconify-icon icon="ion:bag" width="24" height="24"></iconify-icon>
+        <span>Cards</span>
+      </div>
+      <div class="orders flex-col-center">
+        <iconify-icon icon="bi:cart" width="24" height="24"></iconify-icon>
+        <span>Orders</span>
+      </div>
+      <div class="flex-col-center">
+        <iconify-icon icon="cil:wallet" width="24" height="24"></iconify-icon
+        ><span>Wallet</span>
+      </div>
+      <div class="flex-col-center">
+        <iconify-icon
+          icon="fa6-regular:user"
+          width="24"
+          height="24"
+        ></iconify-icon>
+        <span>Profile</span>
+      </div>
+    </footer>
+  </body>
+</html>

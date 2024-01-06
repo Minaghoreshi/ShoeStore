@@ -1,0 +1,15 @@
+export const firstPage = document.querySelector(".first-page ");
+export const secondPage = document.querySelector(".second-page ");
+export const backBtn = document.querySelector(".back-botton");
+export const password = document.querySelector(".password-input");
+export const email = document.querySelector(".email-input");
+export const signinBtn = document.querySelector(".sign-in");
+export const eye = document.querySelector(".eye");
+export const form = document.querySelector(".sign-in-form");
+export const passwordAlert = document.querySelector(".invalid-password");
+export const brandListContainer = document.querySelector(".brand-list");
+export const moreBtn = document.getElementById("moreBrand");
+export const brandsScrollContainer = document.querySelector(".brand-scroll");
+export const allBrand = document.querySelector(".all-brand-button");
+export const productsWrapper = document.querySelector(".products-wrapper");
+export const mostPopular = document.querySelector(".most-popular");

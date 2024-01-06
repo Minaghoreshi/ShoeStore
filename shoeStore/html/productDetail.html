@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script defer type="module" src="../js_modules/productDetail.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </head>
+  <body>
+    <div class="container flex flex-col">
+      <div class="h-14 px-6 items-center flex justify-start w-full">
+        <i class="back-botton fa-solid fa-arrow-left"></i>
+      </div>
+      <div
+        class="careousel h-[330px] relative flex items-start bg-gray-100 justify-center pt-6"
+      >
+        <div class="img-container w-[328px] h-[190px]"></div>
+
+        <div class="carousel-button absolute flex bottom-5 left-44 gap-2"></div>
+      </div>
+
+      <div class="wrapper pt-10 px-6">
+        <div class="product-name flex flex-col gap-3">
+          <div>
+            <span class="shoe-title text-[30px] font-bold"></span
+            ><i class="fa fa-heart-o"></i>
+          </div>
+          <div class="flex items-center gap-1">
+            <span
+              class="sold-value bg-gray-200 rounded-lg text-xs flex items-center justify-center p-2 px-3"
+            >
+            </span>
+            <div class="ml-3"><i class="fa-solid fa-star-half-stroke"></i></div>
+            <span class="rate-review text-xs text-gray-500"></span>
+          </div>
+        </div>
+        <div class="h-[2px] w-full my-5 bg-gray-100"></div>
+        <div class="description flex flex-col gap-3">
+          <span class="text-xl font-semibold">Description</span>
+          <span class="product-description text-gray-500 line-clamp-2"></span>
+        </div>
+        <div class="flex w-full py-5 gap-5 justify-between">
+          <div class="">
+            <span class="text-xl font-semibold">Size</span>
+            <div
+              class="size-section overflow-x-auto w-[180px] py-2 flex items-center no-scrollbar gap-3"
+            ></div>
+          </div>
+          <div class="">
+            <span class="text-xl font-semibold">Color</span>
+            <div
+              class="color-section overflow-x-auto w-[155px] py-2 flex items-center no-scrollbar gap-3"
+            ></div>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <span class="text-xl font-semibold">Quantity</span>
+          <div
+            class="bg-gray-100 rounded-full px-5 py-2 flex items-center justify-center gap-5"
+          >
+            <button class="increase text-2xl">+</button>
+            <span class="quantity">0</span>
+            <button class="decrease text-2xl">-</button>
+          </div>
+        </div>
+        <div class="h-[2px] w-full my-5 bg-gray-100"></div>
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <span class="text-xs text-gray-400">Total Price</span>
+            <span class="price text-xl font-semibold">$ 0</span>
+          </div>
+          <button
+            class="add-to-cart text-white bg-black px-16 rounded-full py-4 flex items-center gap-3"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <g fill="white">
+                <path
+                  stroke="black"
+                  stroke-width="1.5"
+                  d="M3.794 12.03C4.331 9.342 4.6 8 5.487 7.134a4 4 0 0 1 .53-.434C7.04 6 8.41 6 11.15 6h1.703c2.739 0 4.108 0 5.13.7c.19.13.367.276.53.435c.888.865 1.157 2.208 1.694 4.894c.771 3.856 1.157 5.784.269 7.15c-.16.248-.348.477-.56.683C18.75 21 16.785 21 12.853 21H11.15c-3.933 0-5.899 0-7.065-1.138a3.998 3.998 0 0 1-.559-.683c-.888-1.366-.502-3.294.27-7.15Z"
+                />
+                <circle cx="15" cy="9" r="1" fill="black" />
+                <circle cx="9" cy="9" r="1" fill="black" />
+                <path
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  d="M9 6V5a3 3 0 1 1 6 0v1"
+                />
+              </g>
+            </svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

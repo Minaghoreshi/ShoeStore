@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js_modules/login.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container flex flex-col justify-center items-center px-6">
+      <div class="h-14 items-center flex justify-start w-full">
+        <i class="back-botton fa-solid fa-arrow-left"></i>
+      </div>
+      <div class="logo mt-32">
+        <img src="../logo/blackLogo.png" alt="logo-image" />
+      </div>
+      <div class="pt-28">
+        <span class="text-3xl font-semibold">Login to Your Account</span>
+      </div>
+      <form
+        action=""
+        class="sign-in-form flex flex-col gap-5 pt-12 w-full"
+        id="myform"
+      >
+        <div class="flex gap-2 bg-gray-50 rounded-lg pl-3 items-center py-2">
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            class="email-input bg-transparent w-[80%] outline-none border-none focus:ring-0"
+            type="email"
+            placeholder="Email"
+            name="email"
+            value=""
+            required
+          />
+        </div>
+        <div class="flex gap-2 bg-gray-50 rounded-lg pl-3 items-center py-2">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            class="password-input bg-transparent w-[80%] outline-none border-none focus:ring-0"
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <i
+            class="eye fa-solid fa-eye-slash"
+            style="font-size: 25px; color: gray"
+          ></i>
+        </div>
+        <span class="invalid-password text-red-600 hidden"
+          >Invalid Password</span
+        >
+        <div class="flex gap-2 justify-center mt-5">
+          <input class="remember-checkbox" type="checkbox" name="Remember" />
+          <span>Remember Me</span>
+        </div>
+        <div class="px-6 sign-in-area">
+          <button class="nextBtn sign-in bg-gray-400">Sing in</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

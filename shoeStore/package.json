@@ -1,0 +1,21 @@
+{
+  "name": "shoe-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./main.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./main.css -o ./css/style.css --watch",
+    "start-server": "json-server --watch ../Json-server/db.json --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "flowbite": "^1.8.1"
+  }
+}
